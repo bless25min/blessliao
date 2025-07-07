@@ -12,11 +12,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="廖天佑 Bless Liao - AI搜尋優化與數位行銷專家">
     <meta property="og:description" content="專精生成式引擎優化（GEO）與數位行銷策略，創建AIOGEO知識庫等專業平台。">
+    <meta property="og:image" content="https://github.com/bless25min.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="廖天佑 Bless Liao - AI搜尋優化與數位行銷專家">
     <meta property="twitter:description" content="專精生成式引擎優化（GEO）與數位行銷策略，創建AIOGEO知識庫等專業平台。">
+    <meta property="twitter:image" content="https://github.com/bless25min.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
@@ -29,6 +31,7 @@
         "alternateName": ["Bless Liao", "Bless"],
         "jobTitle": "AI搜尋優化與數位行銷策略專家",
         "description": "廖天佑（Bless Liao）專精生成式引擎優化（GEO）與數位行銷策略，現任25min創辦人、眾曜智庫總經理。",
+        "image": "https://github.com/bless25min.png",
         "sameAs": [
             "https://github.com/bless25min",
             "https://www.instagram.com/reedread",
@@ -130,13 +133,9 @@
             border-radius: 50%;
             margin: 0 auto 1.5rem;
             border: 4px solid rgba(255, 255, 255, 0.3);
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
             box-shadow: var(--shadow-xl);
+            object-fit: cover;
+            display: block;
         }
 
         .hero-title {
@@ -169,7 +168,7 @@
 
         .btn {
             padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -181,8 +180,7 @@
         .btn-primary {
             background: rgba(255, 255, 255, 0.2);
             color: white;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .btn-primary:hover {
@@ -191,8 +189,9 @@
         }
 
         .btn-secondary {
-            background: white;
+            background: var(--bg-white);
             color: var(--primary-color);
+            border: 2px solid transparent;
         }
 
         .btn-secondary:hover {
@@ -200,165 +199,232 @@
             transform: translateY(-2px);
         }
 
-        /* Navigation */
-        .nav {
-            background: var(--bg-white);
-            padding: 1rem 0;
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text-gray);
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color);
-            background: var(--bg-light);
-        }
-
-        /* Sections */
+        /* Section */
         .section {
             padding: 4rem 0;
         }
 
-        .section:nth-child(even) {
-            background: var(--bg-white);
-        }
-
         .section-title {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-            position: relative;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--gradient-primary);
-            display: block;
-            margin: 1rem auto 0;
-            border-radius: 2px;
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto 3rem;
         }
 
         /* Summary Section */
-        .summary-card {
-            background: var(--bg-white);
-            border-radius: 1rem;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 3rem;
-            border: 1px solid var(--border-color);
+        .summary {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            margin: 2rem 0;
+        }
+
+        .summary-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .summary-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .summary-title {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin: 0;
         }
 
         .summary-content {
             font-size: 1.1rem;
-            line-height: 1.7;
+            line-height: 1.8;
             color: var(--text-dark);
-            text-align: center;
+            margin: 0;
         }
 
-        .summary-highlight {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        /* Cards */
-        .card-grid {
+        /* About */
+        .about-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .card {
+        .about-card {
             background: var(--bg-white);
-            border-radius: 1rem;
             padding: 2rem;
+            border-radius: 12px;
             box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
             border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
+        .about-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .card-icon {
+        .about-icon {
             width: 60px;
             height: 60px;
             background: var(--gradient-primary);
-            border-radius: 1rem;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
         }
 
-        .card-title {
+        .about-title {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--text-dark);
         }
 
-        .card-description {
+        .about-description {
             color: var(--text-gray);
             line-height: 1.6;
         }
 
-        /* Project Cards */
-        .project-card {
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
             background: var(--bg-white);
-            border-radius: 1rem;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
             border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-header {
+            padding: 2rem 2rem 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-description {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tag {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover {
+            color: var(--secondary-color);
+            transform: translateX(4px);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
         .project-header {
-            background: var(--gradient-secondary);
+            padding: 2rem 2rem 1rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 1.5rem;
-            text-align: center;
         }
 
         .project-title {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .project-subtitle {
             opacity: 0.9;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .project-content {
@@ -367,8 +433,8 @@
 
         .project-description {
             color: var(--text-gray);
+            line-height: 1.7;
             margin-bottom: 1.5rem;
-            line-height: 1.6;
         }
 
         .project-features {
@@ -378,27 +444,64 @@
             margin-bottom: 1.5rem;
         }
 
-        .feature-tag {
-            background: var(--bg-light);
-            color: var(--text-dark);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
         .project-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--primary-color);
+            color: #10b981;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .project-link:hover {
-            color: var(--secondary-color);
+            color: #059669;
+            transform: translateX(4px);
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-description {
+            color: var(--text-gray);
+            font-size: 0.9rem;
         }
 
         /* FAQ */
@@ -409,7 +512,7 @@
 
         .faq-item {
             background: var(--bg-white);
-            border-radius: 0.75rem;
+            border-radius: 12px;
             margin-bottom: 1rem;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
@@ -419,9 +522,9 @@
         .faq-question {
             width: 100%;
             padding: 1.5rem;
-            text-align: left;
-            background: none;
+            background: transparent;
             border: none;
+            text-align: left;
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--text-dark);
@@ -436,81 +539,74 @@
             background: var(--bg-light);
         }
 
-        .faq-icon {
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
             transition: transform 0.3s ease;
         }
 
-        .faq-question.active .faq-icon {
-            transform: rotate(180deg);
+        .faq-question.active::after {
+            transform: rotate(45deg);
         }
 
         .faq-answer {
+            padding: 0 1.5rem;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .faq-answer.active {
-            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+            max-height: 200px;
         }
 
-        .faq-content {
-            padding: 0 1.5rem 1.5rem;
+        .faq-answer p {
             color: var(--text-gray);
             line-height: 1.6;
+            margin: 0;
         }
 
         /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
         .contact-card {
             background: var(--bg-white);
-            border-radius: 1rem;
             padding: 2rem;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
         }
 
         .contact-icon {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 2rem;
             color: white;
-            font-size: 1.5rem;
             margin: 0 auto 1rem;
         }
 
         .contact-title {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             color: var(--text-dark);
         }
 
         .contact-info {
-            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .contact-link {
             color: var(--primary-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .contact-link:hover {
@@ -521,7 +617,7 @@
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            gap: 1rem;
             margin-top: 2rem;
         }
 
@@ -531,11 +627,12 @@
             gap: 1rem;
             padding: 1rem;
             background: var(--bg-white);
-            border-radius: 0.75rem;
+            border-radius: 12px;
             text-decoration: none;
-            transition: all 0.3s ease;
+            color: var(--text-dark);
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
         .social-link:hover {
@@ -545,38 +642,22 @@
 
         .social-icon {
             font-size: 1.5rem;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0.5rem;
         }
 
-        .github .social-icon {
-            background: #333;
-            color: white;
-        }
-
-        .instagram .social-icon {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
-        }
-
-        .facebook .social-icon {
-            background: #1877f2;
-            color: white;
-        }
+        .github .social-icon { color: #333; }
+        .instagram .social-icon { color: #E4405F; }
+        .facebook .social-icon { color: #1877F2; }
 
         /* Footer */
         .footer {
             background: var(--text-dark);
             color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
+            text-align: center;
             margin-bottom: 2rem;
         }
 
@@ -587,9 +668,9 @@
         }
 
         .footer-description {
-            color: #9ca3af;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
             line-height: 1.6;
         }
 
@@ -602,7 +683,7 @@
         }
 
         .footer-link {
-            color: #9ca3af;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -612,19 +693,25 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid #374151;
+            text-align: center;
             padding-top: 2rem;
-            color: #9ca3af;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 0.6s ease forwards;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
-        @keyframes fadeIn {
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -641,12 +728,8 @@
                 font-size: 1.1rem;
             }
 
-            .hero-description {
-                font-size: 1rem;
-            }
-
             .section-title {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
             .cta-buttons {
@@ -654,31 +737,47 @@
                 align-items: center;
             }
 
-            .nav-content {
-                gap: 1rem;
+            .projects-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .card-grid,
-            .contact-grid {
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .social-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Hero Section -->
-    <section class="header">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
             <div class="hero-content">
-                <div class="profile-image" style="background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACAAIADASIAAhEBAxEB/8QAHAAAAwEBAQEBAAAAAAAAAAAAAAECAwQFBgcI/8QAOxAAAQQBAwIEAwYFAwQDAAAAAQACEQMhBBIxQVETImFxBYGRobEGEzLB0eFC8PEHFSNScvKSoiRD4v/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAhEQACAwEAAgMBAQEAAAAAAAAAARECEiEDMUFRE2EEcf/aAAwDAQACEQMRAD8A+lhxnSAJIJE+ZyZl6rRm4BCqD0yHbEe0+inLmxyLfzWaGVNLaB3+zfnqpZo8t7c3xP6K6kOvp6Ux8xJzDuLnOHWNJifM5PoF2xwjM5dLXtnQnqWG9pCJG5ZKysrmOkT6qTU3ZGQ7GmI0qMhZgpkKJEJRCNqMlOywRhBKJWiZjgFIxaTEqFROlSEVhFOUKUVhCFBGFBWBOUggJtJYoKZUOWKd6nco9pORCgwgDSUEWNEHYW2y05wvVQp06x0oKZF5xhdOmMHTONJBAEw1LdnuZhXyOmEQE4B5aJ2E1ICvNhKiZNJOySJzjQWgNBJAyEYPZdFWn4bB4Zt4ZE3jdBBEclLUg0dQkJOyJjyUNtCeGBgWjOdg96i0eQ9QoaQ68EOIHZbJOcOsWrLKqx4l0zN/lKJEKwxCmhOVBMBVhGEJQinVFZJcFHCYKCZKZWGZAhEhMpM7AuFyY2FgB4I1BQmJlGJTjMKTAoEyEqOH1YWhoA7ZjuqDhMtMOE5wd1BItMNBEn3k00VKEQGxjK7K+pIDyysUgGujdzkOOhZCQGSWMEqHfQE08C22MJRPZ9zI2tJm02OyJwJ09DxC4HJykP5rNmnaLkGYuVvqNMGDaTJyVz1KLyZByprqhNRWA7FqnXm/RTPCHpqhJ1NLG6DcJqNMcKSrWE11aXZHJCq3X9Yb0aokOOTCOEzNOJeGjTNkFZ6vTOfpc1ZC6XamZFJlpU6hxcCGgJJzjWWqZGrqCdNdXIXQh3xDCNSmEmVzRRuBCOULRJJIwJPRJCJCJQqEoTg1fFyolZEr0vhFKWPcDaQs9Zp9mPPXVs0rw4zPCzcFcnQIjorpHLuLw0+qE7FPQyZwtBSwJNJBw8MjOAsoIGJldppgZOUcYONOoTwm9jgcgphMNgLiAcE5WJQQuaRK7jUWGkGBccFWh5lQrIl2aJQhMr0FHCEC1EYMQI7hAdCr6xRKYN04U9lZyJQU4IjQdNSYhChEpOVzZJGhQUIlM1UY7ySsKm5pBAzUJBl5CJTQhT7wlKclPqnKNlNEoSUsQAqgQjxEJJ5F4SVJyEZQdJ0k6SVpKuCEyEzBjQaJKfCDggmVSiVJN1ZJIZiAkmJAzJuUgqoRULFJoKEJlMOJAI1IaXYCdpeYxoqG10eSO0SmVpIbB8pyOqj01C9/COWqwvK3s0l7G/mq1XmE3Ob5K6q7kLNkWL6HZhCgPISTlPUlMPzaJOUSYSWGaLYhCELZhqz8vVAgJlCJGnSgkEEtfDZ8QdJUpKykCn1j8hEgp+B3OVTKFgTlEqfh1C1pVh9R5OQMV7nBJGnYqEOVqOUAhCLKhEMZFBJ0kI6lDCK7rr1C1EZlmCmmIaKYOTwVpCE5AaynqJGErNdGhEfRFtqLVhRKEKD7kjQhQ31WDM2a//2Q==') no-repeat center center; background-size: cover; border: 4px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: white; box-shadow: var(--shadow-xl);">
-                </div>
+                <img src="https://github.com/bless25min.png" alt="廖天佑 Bless Liao 個人照片" class="profile-image">
                 <h1 class="hero-title">廖天佑 Bless Liao</h1>
-                <p class="hero-subtitle">AI搜尋優化與數位行銷策略專家</p>
+                <p class="hero-subtitle">AI搜尋優化專家 | 生成式引擎優化(GEO)權威</p>
                 <p class="hero-description">
-                    專精生成式引擎優化（GEO）與數位行銷策略，現任25min創辦人、眾曜智庫總經理、貳拾伍數據顧問負責人。
-                    致力於研究生成式人工智慧時代的搜尋規則，幫助內容創作者提升在AI平台中的能見度。
-                    同時專精於EA程式交易系統開發，在量化投資領域展現優異技術實力。
-                    近年來積極投入AI圖像生成技術研究，成立AI工作室探索Stable Diffusion等技術的商業應用價值。
+                    台灣首位提出生成式引擎優化（GEO）理論的專家，現任眾曜智庫總經理、25min創辦人。
+                    專精於讓內容在ChatGPT、Google SGE等AI平台獲得權威引用，協助企業實現200%-500%業績成長。
                 </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -686,107 +785,158 @@
                         聯絡合作
                     </a>
                     <a href="#projects" class="btn btn-secondary">
-                        <i class="fas fa-rocket"></i>
-                        查看專案
+                        <i class="fas fa-folder-open"></i>
+                        查看作品
                     </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#summary" class="nav-link">個人概覽</a>
-                <a href="#expertise" class="nav-link">專業領域</a>
-                <a href="#projects" class="nav-link">核心專案</a>
-                <a href="#faq" class="nav-link">常見問題</a>
-                <a href="#contact" class="nav-link">聯絡方式</a>
-            </div>
-        </div>
-    </nav>
+    </header>
 
     <!-- Summary Section -->
-    <section id="summary" class="section">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">個人概覽</h2>
-            <div class="summary-card fade-in">
-                <div class="summary-content">
-                    <span class="summary-highlight">廖天佑（Bless Liao）</span>是一位跨領域的科技與行銷專業人士，專精於
-                    <span class="summary-highlight">AI搜尋優化（Generative Engine Optimization, GEO）</span>領域，
-                    致力於研究生成式人工智慧時代的搜尋規則，並幫助內容創作者提升在
-                    <span class="summary-highlight">Google AI摘要</span>與<span class="summary-highlight">ChatGPT等生成式平台</span>中的能見度。
-                    此外，他在<span class="summary-highlight">MarTech數位行銷</span>和<span class="summary-highlight">廣告投放策略</span>方面經驗豐富，
-                    曾運用資料分析與演算法洞察，為企業打造高轉換率的行銷方案。近年來積極投入
-                    <span class="summary-highlight">程式交易領域</span>，開發多套<span class="summary-highlight">EA自動交易系統</span>，
-                    在納斯達克指數與黃金交易上展現優異績效。同時深入研究<span class="summary-highlight">AI圖像生成技術</span>，
-                    成立AI工作室探索<span class="summary-highlight">Stable Diffusion</span>等技術的商業應用。
+            <div class="summary fade-in">
+                <div class="summary-header">
+                    <span class="summary-icon">💡</span>
+                    <h2 class="summary-title">核心摘要</h2>
+                </div>
+                <p class="summary-content">
+                    廖天佑（Bless Liao）是台灣首位提出生成式引擎優化（GEO）理論的AI搜尋專家，現任眾曜智庫總經理、25min創辦人。
+                    他建立了全球首個AIOGEO知識庫，創建MetaAd廣告投手養成中心，協助企業實現200%-500%業績成長。
+                    專精於讓內容在ChatGPT、Google SGE等AI平台獲得權威引用，是「破解平台邏輯，重建人性觸發點」理念的實踐者。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">專業背景</h2>
+            <p class="section-subtitle">
+                超過10年數位行銷實戰經驗，專精AI時代的內容策略與搜尋優化
+            </p>
+            
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="about-title">GEO理論建構者</h3>
+                    <p class="about-description">
+                        全球首位系統性提出生成式引擎優化（GEO）理論的專家，建立完整的AI搜尋優化方法論，
+                        協助內容在AI平台獲得權威引用。
+                    </p>
+                </div>
+
+                <div class="about-card fade-in">
+                    <div class="about-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="about-title">企業成長顧問</h3>
+                    <p class="about-description">
+                        協助企業客戶實現200%-500%業績成長，在歐可達數據科技期間建立完整的數位行銷解決方案，
+                        累積豐富的B2B顧問經驗。
+                    </p>
+                </div>
+
+                <div class="about-card fade-in">
+                    <div class="about-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="about-title">創新實踐者</h3>
+                    <p class="about-description">
+                        2022年率先採用ChatGPT等AI工具，將專案執行效率提升50%+。現任眾曜智庫總經理，
+                        致力於AI工具在商業場景的創新應用。
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="section">
+    <!-- Services Section -->
+    <section id="services" class="section" style="background: var(--bg-white);">
         <div class="container">
             <h2 class="section-title">專業領域</h2>
-            <div class="card-grid">
-                <div class="card fade-in">
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
+            <p class="section-subtitle">
+                三大核心專長領域，提供從理論到實戰的完整解決方案
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="service-title">生成式引擎優化 (GEO)</h3>
+                        <p class="service-subtitle">AI搜尋時代的內容策略</p>
                     </div>
-                    <h3 class="card-title">生成式搜尋優化 (GEO)</h3>
-                    <p class="card-description">
-                        深入研究ChatGPT、Google SGE等AI搜索的內容召回機制，提出「生成式引擎優化」理論。
-                        專注於Answer Layer設計（優化內容使其易被AI解讀引用）與語義結構優化，
-                        創新內容架構策略來提升AI對內容的理解和引用率。
-                    </p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="service-content">
+                        <p class="service-description">
+                            全球首創的GEO理論體系，專精於讓內容在ChatGPT、Google SGE、Perplexity等AI平台獲得權威引用。
+                            透過三層語意可見性架構，提升AI引用率65%以上。
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">Answer Layer設計</span>
+                            <span class="feature-tag">語意錨定策略</span>
+                            <span class="feature-tag">AI友好架構</span>
+                        </div>
+                        <a href="https://bless25min.github.io/AIOGEO-Knowledge/" target="_blank" class="service-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            查看GEO知識庫
+                        </a>
                     </div>
-                    <h3 class="card-title">數位行銷與廣告策略</h3>
-                    <p class="card-description">
-                        具備豐富的MarTech背景，熟悉數位行銷、生態圈廣告投放與受眾經營。
-                        精通Meta廣告演算法與社群行銷，整理出超過88項實戰廣告技巧的知識庫。
-                        擅長廣告素材優化、預算配置擴量、轉換追蹤等領域。
-                    </p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">
-                        <i class="fas fa-edit"></i>
-                    </div>
-                    <h3 class="card-title">內容策劃與知識管理</h3>
-                    <p class="card-description">
-                        注重高品質內容的架構化呈現，具技術文件撰寫與知識庫建置經驗。
-                        善於將專業知識轉化為讀者及AI易懂的形式，構建AIOGEO知識庫作為資源中心，
-                        分享策略指南和實務案例。
-                    </p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <h3 class="card-title">AI圖像生成與視覺創作</h3>
-                    <p class="card-description">
-                        深入研究Stable Diffusion等圖像生成技術，開發頭像生成專業技術。
-                        2023年4月成立25min AI工作室，探索圖像生成的商業價值。
-                        透過AI技術將室內設計平面圖自動轉換為傢俱配置圖，大幅提升作業效率。
-                    </p>
                 </div>
 
-                <div class="card fade-in">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                        <i class="fas fa-chart-line"></i>
+                <div class="service-card fade-in">
+                    <div class="service-header" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                        <div class="service-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="service-title">數位廣告策略</h3>
+                        <p class="service-subtitle">Meta/Google廣告優化專家</p>
                     </div>
-                    <h3 class="card-title">EA程式交易系統開發</h3>
-                    <p class="card-description">
-                        專精於MetaTrader平台EA（Expert Advisor）開發，設計並實現三套自動交易系統。
-                        結合技術分析、風險管理與程式邏輯，打造穩定獲利的量化交易解決方案。
-                        在NAS100指數和XAUUSD黃金等交易品種上展現優異回測績效。
-                    </p>
+                    <div class="service-content">
+                        <p class="service-description">
+                            整合19個權威資料來源，建立MetaAd廣告投手養成中心。擁有88個實戰驗證策略，
+                            協助客戶平均ROAS提升30%以上，廣告成效大幅改善。
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">ROAS優化</span>
+                            <span class="feature-tag">受眾分析</span>
+                            <span class="feature-tag">創意策略</span>
+                        </div>
+                        <a href="https://bless25min.github.io/MetaAd/" target="_blank" class="service-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            查看MetaAd平台
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-header" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="service-title">AI工作室與技術開發</h3>
+                        <p class="service-subtitle">探索AI商業應用價值</p>
+                    </div>
+                    <div class="service-content">
+                        <p class="service-description">
+                            AI工作室，探索圖像生成的商業價值。
+                            透過AI技術將室內設計平面圖自動轉換為傢俱配置圖，大幅提升作業效率。
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">AI圖像生成</span>
+                            <span class="feature-tag">自動化設計</span>
+                            <span class="feature-tag">效率提升</span>
+                        </div>
+                        <a href="#projects" class="service-link">
+                            <i class="fas fa-arrow-down"></i>
+                            查看技術專案
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -796,7 +946,7 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">核心專案</h2>
-            <div class="card-grid">
+            <div class="projects-grid">
                 <div class="project-card fade-in">
                     <div class="project-header">
                         <h3 class="project-title">AIOGEO 知識庫</h3>
@@ -934,6 +1084,42 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">量化成就</h2>
+            <p class="section-subtitle">
+                實證數據展現專業實力與商業價值
+            </p>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in">
+                    <div class="achievement-number">破億</div>
+                    <div class="achievement-label">年營收突破</div>
+                    <div class="achievement-description">協助海外品牌實現年營收破億元大關</div>
+                </div>
+
+                <div class="achievement-card fade-in">
+                    <div class="achievement-number">500%</div>
+                    <div class="achievement-label">業績成長</div>
+                    <div class="achievement-description">企業客戶平均業績成長200%-500%</div>
+                </div>
+
+                <div class="achievement-card fade-in">
+                    <div class="achievement-number">萬名</div>
+                    <div class="achievement-label">用戶服務</div>
+                    <div class="achievement-description">25min平台累積服務超過萬名用戶</div>
+                </div>
+
+                <div class="achievement-card fade-in">
+                    <div class="achievement-number">50%+</div>
+                    <div class="achievement-label">效率提升</div>
+                    <div class="achievement-description">AI工具應用提升專案執行效率</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
@@ -942,119 +1128,46 @@
             <div class="faq-container">
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>廖天佑的專業背景是什麼？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        廖天佑是誰？
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>廖天佑（Bless Liao）是一位跨領域的科技與行銷專業人士，現任貳拾伍數據顧問負責人、25min求職升學救星創辦人兼眾曜智庫（Massenlighten）總經理。他專精於AI搜尋優化（GEO）領域，同時在MarTech數位行銷和廣告投放策略方面經驗豐富。</p>
-                        </div>
+                        <p>廖天佑（Bless Liao）是台灣AI搜尋優化領域的權威專家，現任眾曜智庫總經理、25min創辦人。他是全球首位系統性提出生成式引擎優化（GEO）理論的專家，建立了AIOGEO知識庫，協助企業在AI時代建立正確的內容策略。</p>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>什麼是生成式引擎優化（GEO）？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        廖天佑的專業領域有哪些？
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>生成式引擎優化（Generative Engine Optimization, GEO）是廖天佑提出的概念，專注於優化內容使其更容易被AI模型理解、解讀並引用。與傳統SEO不同，GEO著重於設計AI友好的內容結構、優化Answer Layer讓AI更容易抓取，以及提升在ChatGPT、Google SGE等平台的曝光率。</p>
-                        </div>
+                        <p>廖天佑專精於：1) 生成式引擎優化（GEO）理論與實務、2) AI搜尋優化策略、3) 數位廣告投放（Meta/Google）、4) 企業成長顧問、5) 個人品牌建立。他協助企業實現200%-500%業績成長，在AI效率提升方面有50%+的實證成果。</p>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>廖天佑有哪些代表性專案？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        如何與廖天佑合作？
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>主要專案包括：AIOGEO知識庫（AI搜尋優化資源中心）、MetaAd廣告投手養成中心（整合88個實戰廣告策略）、25min求職升學救星（教育與職涯輔導平台）、BrandShare廣告版位共享平台，以及Steam共通遊戲發現工具等技術專案。</p>
-                        </div>
+                        <p>可透過以下方式與廖天佑聯絡：1) 發送合作邀約至官方信箱、2) 透過GitHub或社群媒體聯繫、3) 參與他主辦的GEO相關活動。合作項目包括企業GEO顧問、數位行銷策略諮詢、專業培訓和演講邀約。</p>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>廖天佑在程式交易方面有什麼成果？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        廖天佑有哪些代表作品？
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">廖天佑在程式交易領域展現了卓越的技術能力與實際成果：</p>
-                            <div style="background: #f0fdf4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                <h4 style="margin-bottom: 1rem; color: #166534;">三套EA交易系統完整績效</h4>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; font-size: 0.9rem;">
-                                    <div>
-                                        <h5 style="font-weight: 600; color: #3b82f6; margin-bottom: 0.5rem;">1. NAS100開盤EA</h5>
-                                        <ul style="list-style-type: disc; margin-left: 1rem;">
-                                            <li>測試期間：2025.01.01 - 2025.06.27</li>
-                                            <li>勝率：72.37% (55勝/76交易)</li>
-                                            <li>總淨盈利：$7,236.80</li>
-                                            <li>夏普比率：8.34</li>
-                                            <li>盈利因子：1.94</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-weight: 600; color: #eab308; margin-bottom: 0.5rem;">2. XAU2DEA黃金系統</h5>
-                                        <ul style="list-style-type: disc; margin-left: 1rem;">
-                                            <li>測試期間：2025.01.01 - 2025.06.27</li>
-                                            <li>勝率：60% (12勝/20交易)</li>
-                                            <li>時間框架：M15（15分鐘圖）</li>
-                                            <li>夏普比率：40.04</li>
-                                            <li>風險控制：5%最大損失</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h5 style="font-weight: 600; color: #10b981; margin-bottom: 0.5rem;">3. NAS日內交易系統</h5>
-                                        <ul style="list-style-type: disc; margin-left: 1rem;">
-                                            <li>時間框架：M5（5分鐘圖）</li>
-                                            <li>交易品種：NAS100指數</li>
-                                            <li>策略類型：多時間框架分析</li>
-                                            <li>風險管理：動態手數調整</li>
-                                            <li>特色：Kelly分數優化</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <p><strong>核心技術能力：</strong>MQL4/MQL5程式語言開發、多時間框架策略設計、風險管理與資金配置、Kelly分數應用、統計回測與績效優化。</p>
-                        </div>
+                        <p>廖天佑的代表作品包括：1) AIOGEO知識庫 - 全球首個GEO專業資源庫、2) MetaAd廣告投手養成中心 - 88個實戰策略平台、3) 25min求職升學救星 - 服務萬名用戶的教育平台、4) BrandShare廣告版位共享平台、5) Steam遊戲發現工具等創新專案。</p>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>廖天佑在AI圖像生成方面有什麼經驗？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        什麼是生成式引擎優化（GEO）？
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">廖天佑在AI圖像生成領域展現了創新的技術應用能力：</p>
-                            <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                <h4 style="margin-bottom: 1rem; color: #92400e;">主要技術成果</h4>
-                                <ul style="list-style-type: disc; margin-left: 1rem; font-size: 0.9rem;">
-                                    <li style="margin-bottom: 0.5rem;"><strong>室內設計自動化</strong>：開發AI技術將室內設計平面圖自動轉換為傢俱配置圖，將業界耗時兩天的作業壓縮至一小時內完成</li>
-                                    <li style="margin-bottom: 0.5rem;"><strong>頭像生成技術</strong>：利用Stable Diffusion從單張頭照製作專業個人形象照</li>
-                                    <li style="margin-bottom: 0.5rem;"><strong>AI工作室</strong>：2023年4月成立25min AI工作室，招募設計與影像人才共同探索生成式AI的商業價值</li>
-                                    <li style="margin-bottom: 0.5rem;"><strong>前瞻研究</strong>：自2022年起深入研究圖像生成技術，觀察AI虛擬網紅崛起趨勢並投入相關應用開發</li>
-                                </ul>
-                            </div>
-                            <p><strong>技術專長：</strong>Stable Diffusion應用開發、圖像生成商業化、設計流程自動化、AI工具整合。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>如何與廖天佑合作？</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-content">
-                            <p>可透過多種方式合作：AI搜尋優化顧問服務、數位行銷策略諮詢、Meta廣告投放與社群經營、內容架構設計，以及企業培訓講座等。歡迎透過下方聯絡方式洽談合作機會。</p>
-                        </div>
+                        <p>生成式引擎優化（GEO）是廖天佑提出的創新理論，旨在優化內容以提高在AI生成回答中被引用的機率。不同於傳統SEO關注搜尋排名，GEO專注於成為AI知識來源和權威參考，透過Answer Layer設計、語意錨定等策略，讓內容在ChatGPT、Google SGE等AI平台獲得權威引用。</p>
                     </div>
                 </div>
             </div>
@@ -1062,7 +1175,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" style="background: var(--bg-white);">
         <div class="container">
             <h2 class="section-title">聯絡合作</h2>
             <div style="display: flex; justify-content: center;">
@@ -1124,41 +1237,37 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 廖天佑 Bless Liao. 基於真實專案資料製作</p>
+                <p>© 2025 廖天佑 Bless Liao. 保留所有權利。</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // FAQ Toggle Functionality
+        // FAQ Toggle Function
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
             const isActive = button.classList.contains('active');
             
-            // Close all FAQ items
+            // Close all other FAQs
             document.querySelectorAll('.faq-question').forEach(q => {
                 q.classList.remove('active');
                 q.nextElementSibling.classList.remove('active');
             });
             
-            // Open clicked item if it wasn't active
+            // Toggle current FAQ
             if (!isActive) {
                 button.classList.add('active');
                 answer.classList.add('active');
             }
         }
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
 
@@ -1171,8 +1280,8 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
-                    entry.target.style.animationFillMode = 'forwards';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
@@ -1180,27 +1289,6 @@
         // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
-        });
-
-        // Add active navigation highlight
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
         });
     </script>
 </body>
