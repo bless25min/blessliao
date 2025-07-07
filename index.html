@@ -2,50 +2,7 @@
                 grid-template-columns: 1fr;
             }            .achievements-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }        /* Achievements */
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .achievement-card {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .achievement-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement-label {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement-description {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }<!DOCTYPE html>
+            }<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
@@ -789,10 +746,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .achievements-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .social-grid {
                 grid-template-columns: 1fr;
             }
@@ -801,10 +754,6 @@
         @media (max-width: 480px) {
             .container {
                 padding: 0 0.75rem;
-            }
-
-            .achievements-grid {
-                grid-template-columns: 1fr;
             }
 
             .footer-links {
