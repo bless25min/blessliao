@@ -130,6 +130,7 @@
         }
         .section-card {
             transition: all 0.3s ease;
+            border: 1px solid rgba(229, 231, 235, 0.5);
         }
         .section-card:hover {
             transform: translateY(-5px);
@@ -142,6 +143,47 @@
         .project-link:hover {
             transform: scale(1.05);
             color: #667eea;
+        }
+        
+        /* Mobile responsive fixes */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .md\\:grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            .md\\:grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            .text-4xl {
+                font-size: 2rem;
+            }
+            .text-6xl {
+                font-size: 3rem;
+            }
+        }
+        
+        /* Ensure proper spacing */
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        .space-y-3 > * + * {
+            margin-top: 0.75rem;
+        }
+        
+        /* FAQ accordion styling */
+        details[open] summary {
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+        
+        /* Improved readability */
+        .text-gray-700 {
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -958,6 +1000,7 @@
                         <div class="font-semibold text-indigo-800">技術培訓講座</div>
                         <div class="text-gray-600">企業內訓與教學</div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
