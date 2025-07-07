@@ -1,4 +1,51 @@
-<!DOCTYPE html>
+.achievements-grid {
+                grid-template-columns: 1fr;
+            }            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-description {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
@@ -1084,41 +1131,7 @@
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section class="section" style="background: var(--bg-white);">
-        <div class="container">
-            <h2 class="section-title">量化成就</h2>
-            <p class="section-subtitle">
-                實證數據展現專業實力與商業價值
-            </p>
-            
-            <div class="achievements-grid">
-                <div class="achievement-card fade-in">
-                    <div class="achievement-number">破億</div>
-                    <div class="achievement-label">年營收突破</div>
-                    <div class="achievement-description">協助海外品牌實現年營收破億元大關</div>
-                </div>
 
-                <div class="achievement-card fade-in">
-                    <div class="achievement-number">500%</div>
-                    <div class="achievement-label">業績成長</div>
-                    <div class="achievement-description">企業客戶平均業績成長200%-500%</div>
-                </div>
-
-                <div class="achievement-card fade-in">
-                    <div class="achievement-number">萬名</div>
-                    <div class="achievement-label">用戶服務</div>
-                    <div class="achievement-description">25min平台累積服務超過萬名用戶</div>
-                </div>
-
-                <div class="achievement-card fade-in">
-                    <div class="achievement-number">50%+</div>
-                    <div class="achievement-label">效率提升</div>
-                    <div class="achievement-description">AI工具應用提升專案執行效率</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="section">
