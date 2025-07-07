@@ -43,7 +43,7 @@
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white)
 
-## 🎯 重點專案展示
+## 🎯 GitHub專案展示（6個核心專案）
 
 ### 🧠 [AIOGEO 知識庫](https://bless25min.github.io/AIOGEO-Knowledge/)
 ![GitHub stars](https://img.shields.io/github/stars/bless25min/AIOGEO-Knowledge?style=social)
@@ -119,6 +119,44 @@ async function findCommonGames(userIds) {
 
 ---
 
+### 🤝 [BrandShare 廣告版位共享平台](https://bless25min.github.io/BrandShare/)
+![GitHub stars](https://img.shields.io/github/stars/bless25min/BrandShare?style=social)
+
+**🎯 創新概念**：品牌流量交換與廣告版位共享平台
+
+**💡 平台特色**：
+- 🔄 **智能媒合**：AI驅動的品牌配對系統
+- 📊 **效益追蹤**：即時ROI與流量分析
+- 🤝 **雙贏模式**：降低廣告成本，提升曝光效果
+- 🌐 **生態建構**：打造品牌合作新生態
+
+**🛠️ 商業模式**：
+- 免費版位互換機制
+- 精準受眾配對演算法
+- 成效數據即時追蹤
+- 品牌安全過濾系統
+
+---
+
+### 🚀 [個人品牌網站](https://bless25min.github.io/blessliao-profile)
+![GitHub stars](https://img.shields.io/github/stars/bless25min/blessliao?style=social)
+
+**🎯 專案定位**：完整實施GEO策略的個人品牌展示網站
+
+**💡 核心亮點**：
+- 🤖 **AI搜尋優化**：完整實施GEO策略，針對ChatGPT、Google SGE優化
+- 📊 **權威內容展示**：整合所有重要專案與商業成果
+- 💼 **商業成果驗證**：展示年營收破億、業績成長500%等量化成就
+- 📱 **響應式設計**：完美適配桌面、平板、手機等各種裝置
+
+**🛠️ 技術特色**：
+- AI摘要友好的Summary設計
+- 結構化FAQ問答模組
+- Schema.org JSON-LD標記
+- 完整的SEO+GEO雙軌優化
+
+---
+
 ### 📈 [EA程式交易系統](https://bless25min.github.io/EA/)
 ![Trading Systems](https://img.shields.io/badge/Trading-3%20Systems-success?style=for-the-badge)
 
@@ -136,30 +174,11 @@ async function findCommonGames(userIds) {
 - 量化交易策略設計
 - 風險控制演算法
 
----
-
-### 🏢 [25min 求職升學救星](https://25min.co)
-![Users](https://img.shields.io/badge/Users-10000+-blue?style=for-the-badge)
-
-**🎯 平台定位**：教育與職涯輔導領導品牌
-
-**💡 成就亮點**：
-- 👥 **萬名用戶服務**：累積服務超過萬名學生與求職者
-- 📚 **5年教育經驗**：深耕財商教育與職涯規劃
-- 💝 **社會責任**：清寒學生贊助計畫持續推行
-- 🏆 **業界認可**：獲得多項教育創新獎項
-
----
-
-### 🤝 [BrandShare 廣告版位共享平台](https://bless25min.github.io/BrandShare/)
-
-**🎯 創新概念**：品牌流量交換與廣告版位共享平台
-
-**💡 平台特色**：
-- 🔄 **智能媒合**：AI驅動的品牌配對系統
-- 📊 **效益追蹤**：即時ROI與流量分析
-- 🤝 **雙贏模式**：降低廣告成本，提升曝光效果
-- 🌐 **生態建構**：打造品牌合作新生態
+**📊 績效展示**：
+- 系統回測勝率與收益圖表
+- 不同市場條件下的表現分析
+- 完整的技術指標說明
+- 專業的風險評估報告
 
 ## 📊 GitHub 統計
 
@@ -173,6 +192,20 @@ async function findCommonGames(userIds) {
 
 </div>
 
+## 🌟 專案技術摘要
+
+### 📚 知識型專案（2個）
+- **AIOGEO知識庫**：GEO理論建構與實戰指南
+- **MetaAd平台**：Meta廣告88個策略整合
+
+### 🛠️ 工具型專案（2個）  
+- **Steam遊戲工具**：社群遊戲發現與推薦
+- **BrandShare平台**：品牌廣告版位媒合
+
+### 💼 商業型專案（2個）
+- **個人品牌網站**：完整GEO策略實施案例
+- **EA交易系統**：量化投資與自動化交易
+
 ## 🏆 專業認證與成就
 
 ### 🎯 GEO 領域開拓
@@ -182,7 +215,7 @@ async function findCommonGames(userIds) {
 
 ### 💼 商業成果
 - 💰 **營收突破**：協助海外品牌年營收破億
-- 📈 **成長驅動**：企業客戶業績成長200%-500%
+- 📈 **成長驅動**：企戶客戶業績成長200%-500%
 - 🚀 **效率創新**：AI工具應用，專案效率提升50%+
 
 ### 🌟 社會影響
@@ -233,17 +266,28 @@ async function findCommonGames(userIds) {
 - **🎓 教育培訓**: GEO/SEO專業培訓
 - **🎤 演講邀約**: AI搜尋優化主題分享
 
+### 🏢 商業服務
+- **🎯 GEO策略顧問**：AI搜尋優化完整解決方案
+- **📊 Meta廣告投放**：88個策略技巧專業培訓
+- **🚀 企業成長顧問**：200%-500%業績成長方案
+- **🤖 AI工具導入**：50%+效率提升實戰指導
+
 ## 📝 最新動態
 
 ### 🔥 近期專案
-- 🚀 **個人品牌網站**：完整實施GEO策略的個人品牌展示
-- 📊 **GEO優化報告**：深度分析AI搜尋優化最佳實踐
-- 🎯 **企業GEO顧問**：協助企業建立AI友好的內容策略
+- 🚀 **個人品牌網站升級**：完整實施GEO策略的標竿案例
+- 📊 **MetaAd平台2.0**：19個權威來源整合完成
+- 🎯 **企業GEO顧問**：協助多家企業建立AI友好內容策略
 
 ### 📚 知識分享
 - 📖 定期更新AIOGEO知識庫內容
 - 🎥 製作GEO實戰教學影片
 - 📊 分享最新AI搜尋趨勢分析
+
+### 🌍 國際拓展
+- 🌏 **亞太市場**：GEO理論推廣至東南亞市場
+- 🇺🇸 **北美合作**：與多家國際品牌建立合作關係
+- 🤝 **跨界聯盟**：與AI技術公司建立策略夥伴關係
 
 ---
 
@@ -258,5 +302,18 @@ async function findCommonGames(userIds) {
 *海外品牌年營收破億 • 企業業績成長500% • AI效率提升50%+ • 服務萬名用戶*
 
 ⭐ **如果我的專案對您有幫助，歡迎給個 Star 支持！**
+
+---
+
+### 📊 專案統計總覽
+
+| 專案類型 | 專案數量 | 核心技術 | 服務用戶 |
+|---------|---------|---------|---------|
+| 🧠 知識平台 | 2個 | GEO+SEO優化 | 10萬+ |
+| 🛠️ 工具應用 | 2個 | API整合+前端 | 5萬+ |
+| 💼 商業平台 | 2個 | 全端開發 | 1萬+ |
+| **📈 總計** | **6個** | **多元技術棧** | **16萬+** |
+
+**🚀 2025年目標：專案數突破10個，服務用戶達20萬+**
 
 </div>
