@@ -3,28 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廖天佑 Bless Liao - AI搜尋優化與行銷策略專家｜個人品牌介紹</title>
-    <meta name="description" content="廖天佑（Bless Liao）是專精AI搜尋優化（GEO）與數位行銷的策略顧問，現任25min創辦人、眾曜智庫總經理。擅長生成式引擎優化、Meta廣告投放策略、內容架構設計。">
+    <title>廖天佑 Bless Liao - AI搜尋優化與數位行銷專家｜個人品牌介紹</title>
+    <meta name="description" content="廖天佑（Bless Liao）專精生成式引擎優化（GEO）與數位行銷策略，現任25min創辦人、眾曜智庫總經理。創建AIOGEO知識庫、MetaAd廣告投手養成中心等專業平台。">
     <meta name="keywords" content="廖天佑, Bless Liao, AI搜尋優化, GEO, 生成式引擎優化, 數位行銷, Meta廣告, 25min, AIOGEO">
     <meta name="author" content="廖天佑 Bless Liao">
-    <link rel="canonical" href="https://blessliao.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://blessliao.com">
-    <meta property="og:title" content="廖天佑 Bless Liao - AI搜尋優化與行銷策略專家">
-    <meta property="og:description" content="專精AI搜尋優化（GEO）與數位行銷的策略顧問，致力於研究生成式人工智慧時代的搜尋規則。">
-    <meta property="og:image" content="https://blessliao.com/bless-liao-profile.jpg">
-
+    <meta property="og:title" content="廖天佑 Bless Liao - AI搜尋優化與數位行銷專家">
+    <meta property="og:description" content="專精生成式引擎優化（GEO）與數位行銷策略，創建AIOGEO知識庫等專業平台。">
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://blessliao.com">
-    <meta property="twitter:title" content="廖天佑 Bless Liao - AI搜尋優化與行銷策略專家">
-    <meta property="twitter:description" content="專精AI搜尋優化（GEO）與數位行銷的策略顧問，致力於研究生成式人工智慧時代的搜尋規則。">
-
-    <link rel="alternate" hreflang="zh-Hant" href="https://blessliao.com/zh">
-    <link rel="alternate" hreflang="en" href="https://blessliao.com/en">
-    <link rel="alternate" hreflang="x-default" href="https://blessliao.com">
+    <meta property="twitter:title" content="廖天佑 Bless Liao - AI搜尋優化與數位行銷專家">
+    <meta property="twitter:description" content="專精生成式引擎優化（GEO）與數位行銷策略，創建AIOGEO知識庫等專業平台。">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
@@ -34,11 +26,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "廖天佑",
-        "alternateName": ["Bless Liao", "Tianyou Liao"],
-        "jobTitle": "AI搜尋優化與數位行銷策略顧問",
-        "description": "廖天佑（Bless Liao）是專精AI搜尋優化（GEO）與數位行銷的策略顧問，現任25min創辦人、眾曜智庫總經理。擅長生成式引擎優化、Meta廣告投放策略、內容架構設計。",
-        "url": "https://blessliao.com",
-        "image": "https://blessliao.com/bless-liao-profile.jpg",
+        "alternateName": ["Bless Liao", "Bless"],
+        "jobTitle": "AI搜尋優化與數位行銷策略專家",
+        "description": "廖天佑（Bless Liao）專精生成式引擎優化（GEO）與數位行銷策略，現任25min創辦人、眾曜智庫總經理。",
         "sameAs": [
             "https://github.com/bless25min",
             "https://www.instagram.com/reedread",
@@ -48,18 +38,20 @@
             {
                 "@type": "Organization",
                 "name": "眾曜智庫",
-                "alternateName": "Massenlighten",
-                "description": "策略研究與知識管理"
+                "alternateName": "Massenlighten"
             },
             {
                 "@type": "Organization",
-                "name": "25min求職升學救星",
-                "description": "教育與職涯輔導平台"
+                "name": "25min求職升學救星"
+            },
+            {
+                "@type": "Organization",
+                "name": "貳拾伍數據顧問"
             }
         ],
         "knowsAbout": [
-            "AI搜尋優化",
             "生成式引擎優化",
+            "AI搜尋優化",
             "數位行銷",
             "Meta廣告投放",
             "內容策略",
@@ -234,7 +226,7 @@
             transition: all 0.3s ease;
         }
 
-        .nav-link:hover {
+        .nav-link:hover, .nav-link.active {
             color: var(--primary-color);
             background: var(--bg-light);
         }
@@ -265,6 +257,28 @@
             display: block;
             margin: 1rem auto 0;
             border-radius: 2px;
+        }
+
+        /* Summary Section */
+        .summary-card {
+            background: var(--bg-white);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .summary-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .summary-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
         }
 
         /* Cards */
@@ -385,35 +399,6 @@
 
         .project-link:hover {
             color: var(--secondary-color);
-        }
-
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg-white);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-weight: 500;
         }
 
         /* FAQ */
@@ -674,7 +659,6 @@
             }
 
             .card-grid,
-            .stats-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -686,14 +670,15 @@
     <section class="header">
         <div class="container">
             <div class="hero-content">
-                <div class="profile-image">
-                    <i class="fas fa-brain"></i>
+                <div class="profile-image" style="background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACAAIADASIAAhEBAxEB/8QAHAAAAwEBAQEBAAAAAAAAAAAAAAECAwQFBgcI/8QAOxAAAQQBAwIEAwYFAwQDAAAAAQACEQMhBBIxQVETImFxBYGRobEGEzLB0eFC8PEHFSNScvKSoiRD4v/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAhEQACAwEAAgMBAQEAAAAAAAAAARECEiEDMUFRE2EEcf/aAAwDAQACEQMRAD8A+lhxnSAJIJE+ZyZl6rRm4BCqD0yHbEe0+inLmxyLfzWaGVNLaB3+zfnqpZo8t7c3xP6K6kOvp6Ux8xJzDuLnOHWNJifM5PoF2xwjM5dLXtnQnqWG9pCJG5ZKysrmOkT6qTU3ZGQ7GmI0qMhZgpkKJEJRCNqMlOywRhBKJWiZjgFIxaTEqFROlSEVhFOUKUVhCFBGFBWBOUggJtJYoKZUOWKd6nco9pORCgwgDSUEWNEHYW2y05wvVQp06x0oKZF5xhdOmMHTONJBAEw1LdnuZhXyOmEQE4B5aJ2E1ICvNhKiZNJOySJzjQWgNBJAyEYPZdFWn4bB4Zt4ZE3jdBBEclLUg0dQkJOyJjyUNtCeGBgWjOdg96i0eQ9QoaQ68EOIHZbJOcOsWrLKqx4l0zN/lKJEKwxCmhOVBMBVhGEJQinVFZJcFHCYKCZKZWGZAhEhMpM7AuFyY2FgB4I1BQmJlGJTjMKTAoEyEqOH1YWhoA7ZjuqDhMtMOE5wd1BItMNBEn3k00VKEQGxjK7K+pIDyysUgGujdzkOOhZCQGSWMEqHfQE08C22MJRPZ9zI2tJm02OyJwJ09DxC4HJykP5rNmnaLkGYuVvqNMGDaTJyVz1KLyZByprqhNRWA7FqnXm/RTPCHpqhJ1NLG6DcJqNMcKSrWE11aXZHJCq3X9Yb0aokOOTCOEzNOJeGjTNkFZ6vTOfpc1ZC6XamZFJlpU6hxcCGgJJzjWWqZGrqCdNdXIXQh3xDCNSmEmVzRRuBCOULRJJIwJPRJCJCJQqEoTg1fFyolZEr0vhFKWPcDaQs9Zp9mPPXVs0rw4zPCzcFcnQIjorpHLuLw0+qE7FPQyZwtBSwJNJBw8MjOAsoIGJldppgZOUcYONOoTwm9jgcgphMNgLiAcE5WJQQuaRK7jUWGkGBccFWh5lQrIl2aJQhMr0FHCEC1EYMQI7hAdCr6xRKYN04U9lZyJQU4IjQdNSYhChEpOVzZJGhQUIlM1UY7ySsKm5pBAzUJBl5CJTQhT7wlKclPqnKNlNEoSUsQAqgQjxEJJ5F4SVJyEZQdJ0k6SVpKuCEyEzBjQaJKfCDggmVSiVJN1ZJIZiAkmJAzJuUgqoRULFJoKEJlMOJAI1IaXYCdpeYxoqG10eSO0SmVpIbB8pyOqj01C9/COWqwvK3s0l7G/mq1XmE3Ob5K6q7kLNkWL6HZhCgPISTlPUlMPzaJOUSYSWGaLYhCELZhqz8vVAgJlCJGnSgkEEtfDZ8QdJUpKykCn1j8hEgp+B3OVTKFgTlEqfh1C1pVh9R5OQMV7nBJGnYqEOVqOUAhCLKhEMZFBJ0kI6lDCK7rr1C1EZlmCmmIaKYOTwVpCE5AaynqJGErNdGhEfRFtqLVhRKEKD7kjQhQ31WDM2a//2Q==') no-repeat center center; background-size: cover; border: 4px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: white; box-shadow: var(--shadow-xl);">
                 </div>
                 <h1 class="hero-title">廖天佑 Bless Liao</h1>
                 <p class="hero-subtitle">AI搜尋優化與數位行銷策略專家</p>
                 <p class="hero-description">
-                    專精生成式引擎優化（GEO）與數位行銷策略，致力於研究生成式人工智慧時代的搜尋規則。
-                    現任25min創辦人、眾曜智庫總經理，擅長幫助內容創作者提升在AI平台中的能見度。
+                    專精生成式引擎優化（GEO）與數位行銷策略，現任25min創辦人、眾曜智庫總經理、貳拾伍數據顧問負責人。
+                    致力於研究生成式人工智慧時代的搜尋規則，幫助內容創作者提升在AI平台中的能見度。
+                    同時專精於EA程式交易系統開發，在量化投資領域展現優異技術實力。
+                    近年來積極投入AI圖像生成技術研究，成立AI工作室探索Stable Diffusion等技術的商業應用價值。
                 </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -713,15 +698,34 @@
     <nav class="nav">
         <div class="container">
             <div class="nav-content">
+                <a href="#summary" class="nav-link">個人概覽</a>
                 <a href="#expertise" class="nav-link">專業領域</a>
-                <a href="#projects" class="nav-link">專案作品</a>
-                <a href="#achievements" class="nav-link">成就數據</a>
-                <a href="#media" class="nav-link">媒體報導</a>
+                <a href="#projects" class="nav-link">核心專案</a>
                 <a href="#faq" class="nav-link">常見問題</a>
                 <a href="#contact" class="nav-link">聯絡方式</a>
             </div>
         </div>
     </nav>
+
+    <!-- Summary Section -->
+    <section id="summary" class="section">
+        <div class="container">
+            <h2 class="section-title">個人概覽</h2>
+            <div class="summary-card fade-in">
+                <div class="summary-content">
+                    <span class="summary-highlight">廖天佑（Bless Liao）</span>是一位跨領域的科技與行銷專業人士，專精於
+                    <span class="summary-highlight">AI搜尋優化（Generative Engine Optimization, GEO）</span>領域，
+                    致力於研究生成式人工智慧時代的搜尋規則，並幫助內容創作者提升在
+                    <span class="summary-highlight">Google AI摘要</span>與<span class="summary-highlight">ChatGPT等生成式平台</span>中的能見度。
+                    此外，他在<span class="summary-highlight">MarTech數位行銷</span>和<span class="summary-highlight">廣告投放策略</span>方面經驗豐富，
+                    曾運用資料分析與演算法洞察，為企業打造高轉換率的行銷方案。近年來積極投入
+                    <span class="summary-highlight">程式交易領域</span>，開發多套<span class="summary-highlight">EA自動交易系統</span>，
+                    在納斯達克指數與黃金交易上展現優異績效。同時深入研究<span class="summary-highlight">AI圖像生成技術</span>，
+                    成立AI工作室探索<span class="summary-highlight">Stable Diffusion</span>等技術的商業應用。
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Expertise Section -->
     <section id="expertise" class="section">
@@ -734,7 +738,8 @@
                     </div>
                     <h3 class="card-title">生成式搜尋優化 (GEO)</h3>
                     <p class="card-description">
-                        深入研究ChatGPT、Google SGE等AI搜索的內容召回機制，專注於Answer Layer設計與語義結構優化，
+                        深入研究ChatGPT、Google SGE等AI搜索的內容召回機制，提出「生成式引擎優化」理論。
+                        專注於Answer Layer設計（優化內容使其易被AI解讀引用）與語義結構優化，
                         創新內容架構策略來提升AI對內容的理解和引用率。
                     </p>
                 </div>
@@ -742,9 +747,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">數位行銷策略</h3>
+                    <h3 class="card-title">數位行銷與廣告策略</h3>
                     <p class="card-description">
-                        具備豐富的MarTech背景，精通Meta廣告演算法與社群行銷，整理出超過88項實戰廣告技巧的知識庫，
+                        具備豐富的MarTech背景，熟悉數位行銷、生態圈廣告投放與受眾經營。
+                        精通Meta廣告演算法與社群行銷，整理出超過88項實戰廣告技巧的知識庫。
                         擅長廣告素材優化、預算配置擴量、轉換追蹤等領域。
                     </p>
                 </div>
@@ -755,7 +761,19 @@
                     <h3 class="card-title">內容策劃與知識管理</h3>
                     <p class="card-description">
                         注重高品質內容的架構化呈現，具技術文件撰寫與知識庫建置經驗。
-                        善於將專業知識轉化為讀者及AI易懂的形式，構建AIOGEO知識庫作為資源中心。
+                        善於將專業知識轉化為讀者及AI易懂的形式，構建AIOGEO知識庫作為資源中心，
+                        分享策略指南和實務案例。
+                    </p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">EA程式交易系統開發</h3>
+                    <p class="card-description">
+                        專精於MetaTrader平台EA（Expert Advisor）開發，設計並實現三套自動交易系統。
+                        結合技術分析、風險管理與程式邏輯，打造穩定獲利的量化交易解決方案。
+                        在NAS100指數和XAUUSD黃金等交易品種上展現優異回測績效。
                     </p>
                 </div>
             </div>
@@ -774,8 +792,8 @@
                     </div>
                     <div class="project-content">
                         <p class="project-description">
-                            全球首個系統性GEO專業資源庫，完整彙整生成式搜尋最佳化的策略指南，
-                            包括如何讓內容成為ChatGPT等AI的首選引用來源。
+                            發起的開源專案「讓AI看見你的內容」，完整彙整GEO理論與實戰方法。
+                            提供生成式搜尋最佳化的策略指南，包括如何讓內容成為ChatGPT等AI的首選引用來源。
                         </p>
                         <div class="project-features">
                             <span class="feature-tag">GEO理論體系</span>
@@ -796,13 +814,13 @@
                     </div>
                     <div class="project-content">
                         <p class="project-description">
-                            業界首創19個權威資料來源整合的Meta廣告平台，彙集88個經過實戰驗證的廣告投放策略，
-                            涵蓋演算法掌控術、素材優化藝術、預算擴量黑科技等。
+                            整合19個權威資料來源的Meta廣告平台，彙集88個經過實戰驗證的廣告投放策略。
+                            涵蓋演算法掌控術、素材優化藝術、預算擴量黑科技、封閉式再行銷等主題。
                         </p>
                         <div class="project-features">
                             <span class="feature-tag">88個實戰策略</span>
                             <span class="feature-tag">8張專業圖表</span>
-                            <span class="feature-tag">AI GEO優化</span>
+                            <span class="feature-tag">權威資料整合</span>
                         </div>
                         <a href="https://bless25min.github.io/MetaAd/" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
@@ -818,12 +836,12 @@
                     </div>
                     <div class="project-content">
                         <p class="project-description">
-                            專注於提供個人和企業的數位形象設計服務，透過設計與內容行銷幫助客戶在線上世界中脫穎而出。
-                            2023年推出清寒學生贊助計畫，展現企業社會責任。
+                            於2020年創立的服務平台，透過線上資源與顧問輔導，為學生與求職者提供履歷優化、
+                            備審資料撰寫、面試技巧等協助。2023年推出清寒家庭及自立少年贊助計畫。
                         </p>
                         <div class="project-features">
-                            <span class="feature-tag">5年財商教育</span>
-                            <span class="feature-tag">萬名用戶</span>
+                            <span class="feature-tag">財商教育</span>
+                            <span class="feature-tag">職涯輔導</span>
                             <span class="feature-tag">公益贊助</span>
                         </div>
                         <a href="https://25min.co" target="_blank" class="project-link">
@@ -840,13 +858,13 @@
                     </div>
                     <div class="project-content">
                         <p class="project-description">
-                            創新行銷平台，讓不同品牌可互換彼此網站或社群的廣告版位，
-                            透過智能媒合系統實現雙贏行銷效果，降低廣告成本並拓展觸及受眾。
+                            創新行銷平台，讓不同品牌可互換彼此網站或社群的廣告版位。
+                            透過智能媒合確保交換的品牌受眾相關性，實現降低廣告成本、拓展觸及受眾的雙贏行銷效果。
                         </p>
                         <div class="project-features">
                             <span class="feature-tag">智能媒合</span>
-                            <span class="feature-tag">流量交換</span>
-                            <span class="feature-tag">雙贏行銷</span>
+                            <span class="feature-tag">版位交換</span>
+                            <span class="feature-tag">流量共享</span>
                         </div>
                         <a href="https://bless25min.github.io/BrandShare/" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
@@ -854,86 +872,55 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title">量化成就</h2>
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">破億</div>
-                    <div class="stat-label">海外品牌年營收</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">500%+</div>
-                    <div class="stat-label">企業業績成長</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">50%+</div>
-                    <div class="stat-label">AI效率提升</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">萬名</div>
-                    <div class="stat-label">累積服務用戶</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">88項</div>
-                    <div class="stat-label">廣告實戰策略</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">2022</div>
-                    <div class="stat-label">率先採用ChatGPT</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media Section -->
-    <section id="media" class="section">
-        <div class="container">
-            <h2 class="section-title">媒體報導與社群連結</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #333;">📰 權威媒體報導</h3>
-                    <div style="space-y: 1rem;">
-                        <div style="border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1rem;">
-                            <strong>商業週刊專題報導</strong> - 財商教育市場深耕五年，打造萬人線上課程社群
+                <div class="project-card fade-in">
+                    <div class="project-header" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <h3 class="project-title">EA程式交易系統開發</h3>
+                        <p class="project-subtitle">三套量化投資與自動化交易系統</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            專精於MetaTrader平台EA（Expert Advisor）開發，設計三套自動交易系統。
+                            NAS100開盤EA達成72.37%勝率，XAU2DEA黃金系統實現驚人的40.04夏普比率，
+                            以及針對不同市場條件的多元化策略組合。
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">三套EA系統</span>
+                            <span class="feature-tag">MQL4/MQL5開發</span>
+                            <span class="feature-tag">風險管理</span>
+                            <span class="feature-tag">多市場策略</span>
                         </div>
-                        <div style="border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1rem;">
-                            <strong>Yahoo奇摩財經專訪</strong> - 大學學費補助新趨勢與招生制度評論
+                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; font-size: 0.9rem;">
+                            <strong>三套EA系統績效：</strong><br>
+                            • NAS100開盤EA：勝率72.37%，夏普比率8.34<br>
+                            • XAU2DEA黃金系統：勝率60%，夏普比率40.04<br>
+                            • NAS日內交易系統：多時間框架策略優化
                         </div>
-                        <div style="border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1rem;">
-                            <strong>民生電子報</strong> - 25min推出清寒家庭及自立少年贊助方案
-                        </div>
+                        <a href="https://github.com/bless25min" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            查看技術專案
+                        </a>
                     </div>
                 </div>
-                
-                <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #333;">🌐 社群連結</h3>
-                    <div class="social-grid">
-                        <a href="https://github.com/bless25min" target="_blank" class="social-link github">
-                            <i class="fab fa-github social-icon"></i>
-                            <div>
-                                <div style="font-weight: 600; color: #333;">GitHub</div>
-                                <div style="font-size: 0.9rem; color: #666;">技術專案</div>
-                            </div>
-                        </a>
-                        <a href="https://www.instagram.com/reedread" target="_blank" class="social-link instagram">
-                            <i class="fab fa-instagram social-icon"></i>
-                            <div>
-                                <div style="font-weight: 600; color: #333;">Instagram</div>
-                                <div style="font-size: 0.9rem; color: #666;">生活分享</div>
-                            </div>
-                        </a>
-                        <a href="https://www.facebook.com/d2x123" target="_blank" class="social-link facebook">
-                            <i class="fab fa-facebook social-icon"></i>
-                            <div>
-                                <div style="font-weight: 600; color: #333;">Facebook</div>
-                                <div style="font-size: 0.9rem; color: #666;">個人頁面</div>
-                            </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Steam 共通遊戲發現工具</h3>
+                        <p class="project-subtitle">技術開發與社群應用</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            供Discord遊戲群組使用的Steam共通遊戲搜尋平台。結合Steam Web API與Discord OAuth，
+                            讓群組成員快速找出所有人都有的遊戲並組團遊玩。展現全端開發能力與社群產品體驗設計。
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Steam API</span>
+                            <span class="feature-tag">Discord整合</span>
+                            <span class="feature-tag">社群工具</span>
+                        </div>
+                        <a href="https://bless25min.github.io/steamlibrary" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            查看專案
                         </a>
                     </div>
                 </div>
@@ -944,87 +931,123 @@
     <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
-            <h2 class="section-title">常見問題解答 / FAQs</h2>
+            <h2 class="section-title">常見問題解答</h2>
             
             <div class="faq-container">
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Q1: 廖天佑的專長是什麼？</span>
+                        <span>廖天佑的專業背景是什麼？</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">
-                                <strong>廖天佑主要專精於三大領域：</strong>
-                            </p>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem; space-y: 0.5rem;">
-                                <li style="margin-bottom: 0.5rem;"><strong>生成式搜尋優化 (GEO)</strong>：深度研究ChatGPT、Google SGE等AI搜索的內容召回機制，專注於Answer Layer設計與語義結構優化</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>數位行銷策略</strong>：具備豐富的MarTech背景，精通Meta廣告演算法與社群行銷，整理出超過88項實戰廣告技巧</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>內容策劃與知識管理</strong>：善於將專業知識轉化為讀者及AI易懂的形式，建構完整的知識體系</li>
-                            </ul>
+                            <p>廖天佑（Bless Liao）是一位跨領域的科技與行銷專業人士，現任貳拾伍數據顧問負責人、25min求職升學救星創辦人兼眾曜智庫（Massenlighten）總經理。他專精於AI搜尋優化（GEO）領域，同時在MarTech數位行銷和廣告投放策略方面經驗豐富。</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Q2: 什麼是生成式引擎優化 (GEO)？</span>
+                        <span>什麼是生成式引擎優化（GEO）？</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">
-                                <strong>生成式引擎優化 (Generative Engine Optimization, GEO)</strong> 是廖天佑提出的新興概念，
-                                專注於優化內容使其更容易被AI模型理解、解讀並引用。
-                            </p>
-                            <p style="margin-bottom: 1rem;">
-                                與傳統SEO不同，GEO著重於：
-                            </p>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem;">
-                                <li style="margin-bottom: 0.5rem;">設計AI友好的內容結構</li>
-                                <li style="margin-bottom: 0.5rem;">優化Answer Layer讓AI更容易抓取</li>
-                                <li style="margin-bottom: 0.5rem;">提升在ChatGPT、Google SGE等平台的曝光率</li>
-                                <li style="margin-bottom: 0.5rem;">建立語義清晰的內容架構</li>
-                            </ul>
+                            <p>生成式引擎優化（Generative Engine Optimization, GEO）是廖天佑提出的概念，專注於優化內容使其更容易被AI模型理解、解讀並引用。與傳統SEO不同，GEO著重於設計AI友好的內容結構、優化Answer Layer讓AI更容易抓取，以及提升在ChatGPT、Google SGE等平台的曝光率。</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Q3: 廖天佑有哪些代表性專案？</span>
+                        <span>廖天佑有哪些代表性專案？</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">廖天佑的核心專案包括：</p>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem;">
-                                <li style="margin-bottom: 0.5rem;"><strong>AIOGEO 知識庫</strong>：全球首個系統性GEO專業資源庫</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>MetaAd 廣告投手養成中心</strong>：整合88個實戰廣告策略的專業平台</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>25min求職升學救星</strong>：教育與職涯輔導平台，服務萬名用戶</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>BrandShare</strong>：創新的品牌廣告版位共享平台</li>
-                            </ul>
+                            <p>主要專案包括：AIOGEO知識庫（AI搜尋優化資源中心）、MetaAd廣告投手養成中心（整合88個實戰廣告策略）、25min求職升學救星（教育與職涯輔導平台）、BrandShare廣告版位共享平台，以及Steam共通遊戲發現工具等技術專案。</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item fade-in">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Q4: 如何與廖天佑合作？</span>
+                        <span>廖天佑在程式交易方面有什麼成果？</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-content">
-                            <p style="margin-bottom: 1rem;">廖天佑提供多種合作方式：</p>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem;">
-                                <li style="margin-bottom: 0.5rem;"><strong>AI搜尋優化顧問</strong>：協助企業建立GEO策略</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>數位行銷策略諮詢</strong>：Meta廣告投放與社群經營</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>內容架構設計</strong>：AI友好的內容規劃與建置</li>
-                                <li style="margin-bottom: 0.5rem;"><strong>企業培訓講座</strong>：GEO與AI行銷相關主題</li>
-                            </ul>
-                            <p style="margin-top: 1rem;">
-                                歡迎透過下方聯絡方式洽談合作機會。
-                            </p>
+                            <p style="margin-bottom: 1rem;">廖天佑在程式交易領域展現了卓越的技術能力與實際成果：</p>
+                            <div style="background: #f0fdf4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                <h4 style="margin-bottom: 1rem; color: #166534;">三套EA交易系統完整績效</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+                                    <div>
+                                        <h5 style="font-weight: 600; color: #3b82f6; margin-bottom: 0.5rem;">1. NAS100開盤EA</h5>
+                                        <ul style="list-style-type: disc; margin-left: 1rem;">
+                                            <li>測試期間：2025.01.01 - 2025.06.27</li>
+                                            <li>勝率：72.37% (55勝/76交易)</li>
+                                            <li>總淨盈利：$7,236.80</li>
+                                            <li>夏普比率：8.34</li>
+                                            <li>盈利因子：1.94</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-weight: 600; color: #eab308; margin-bottom: 0.5rem;">2. XAU2DEA黃金系統</h5>
+                                        <ul style="list-style-type: disc; margin-left: 1rem;">
+                                            <li>測試期間：2025.01.01 - 2025.06.27</li>
+                                            <li>勝率：60% (12勝/20交易)</li>
+                                            <li>時間框架：M15（15分鐘圖）</li>
+                                            <li>夏普比率：40.04</li>
+                                            <li>風險控制：5%最大損失</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 style="font-weight: 600; color: #10b981; margin-bottom: 0.5rem;">3. NAS日內交易系統</h5>
+                                        <ul style="list-style-type: disc; margin-left: 1rem;">
+                                            <li>時間框架：M5（5分鐘圖）</li>
+                                            <li>交易品種：NAS100指數</li>
+                                            <li>策略類型：多時間框架分析</li>
+                                            <li>風險管理：動態手數調整</li>
+                                            <li>特色：Kelly分數優化</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><strong>核心技術能力：</strong>MQL4/MQL5程式語言開發、多時間框架策略設計、風險管理與資金配置、Kelly分數應用、統計回測與績效優化。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>廖天佑在AI圖像生成方面有什麼經驗？</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p style="margin-bottom: 1rem;">廖天佑在AI圖像生成領域展現了創新的技術應用能力：</p>
+                            <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                <h4 style="margin-bottom: 1rem; color: #92400e;">主要技術成果</h4>
+                                <ul style="list-style-type: disc; margin-left: 1rem; font-size: 0.9rem;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>室內設計自動化</strong>：開發AI技術將室內設計平面圖自動轉換為傢俱配置圖，將業界耗時兩天的作業壓縮至一小時內完成</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>頭像生成技術</strong>：利用Stable Diffusion從單張頭照製作專業個人形象照</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>AI工作室</strong>：2023年4月成立25min AI工作室，招募設計與影像人才共同探索生成式AI的商業價值</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>前瞻研究</strong>：自2022年起深入研究圖像生成技術，觀察AI虛擬網紅崛起趨勢並投入相關應用開發</li>
+                                </ul>
+                            </div>
+                            <p><strong>技術專長：</strong>Stable Diffusion應用開發、圖像生成商業化、設計流程自動化、AI工具整合。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>如何與廖天佑合作？</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <p>可透過多種方式合作：AI搜尋優化顧問服務、數位行銷策略諮詢、Meta廣告投放與社群經營、內容架構設計，以及企業培訓講座等。歡迎透過下方聯絡方式洽談合作機會。</p>
                         </div>
                     </div>
                 </div>
@@ -1036,33 +1059,43 @@
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">聯絡合作</h2>
-            <div class="contact-grid">
-                <div class="contact-card fade-in">
+            <div style="display: flex; justify-content: center;">
+                <div class="contact-card fade-in" style="max-width: 400px;">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3 class="contact-title">商務合作</h3>
+                    <h3 class="contact-title">聯絡信箱</h3>
                     <p class="contact-info">
                         <a href="mailto:bless@25min.co" class="contact-link">bless@25min.co</a>
                     </p>
                 </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="contact-title">公司官網</h3>
-                    <p class="contact-info">
-                        <a href="https://25min.co" target="_blank" class="contact-link">25min.co</a>
-                    </p>
-                </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3 class="contact-title">專業諮詢</h3>
-                    <p class="contact-info">
-                        Line: <span class="contact-link">@25min</span>
-                    </p>
+            </div>
+
+            <!-- Social Links -->
+            <div style="margin-top: 3rem;">
+                <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 1.5rem; color: #333;">社群連結</h3>
+                <div class="social-grid">
+                    <a href="https://github.com/bless25min" target="_blank" class="social-link github">
+                        <i class="fab fa-github social-icon"></i>
+                        <div>
+                            <div style="font-weight: 600; color: #333;">GitHub</div>
+                            <div style="font-size: 0.9rem; color: #666;">技術專案展示</div>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/reedread" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram social-icon"></i>
+                        <div>
+                            <div style="font-weight: 600; color: #333;">Instagram</div>
+                            <div style="font-size: 0.9rem; color: #666;">@reedread</div>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/d2x123" target="_blank" class="social-link facebook">
+                        <i class="fab fa-facebook social-icon"></i>
+                        <div>
+                            <div style="font-weight: 600; color: #333;">Facebook</div>
+                            <div style="font-size: 0.9rem; color: #666;">個人頁面</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1074,8 +1107,8 @@
             <div class="footer-content">
                 <h3 class="footer-title">廖天佑 Bless Liao</h3>
                 <p class="footer-description">
-                    在AI時代，讓個人品牌被正確理解與傳播<br>
-                    「破解平台邏輯，重建人性觸發點」
+                    專精生成式引擎優化（GEO）與數位行銷策略<br>
+                    「在AI時代，讓個人品牌被正確理解與傳播」
                 </p>
                 <div class="footer-links">
                     <a href="https://bless25min.github.io/AIOGEO-Knowledge/" target="_blank" class="footer-link">AIOGEO知識庫</a>
@@ -1085,10 +1118,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 廖天佑 Bless Liao. Made with ❤️ by GEO優化策略</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    海外品牌年營收破億 • 企業業績成長500% • AI效率提升50%+ • 服務萬名用戶
-                </p>
+                <p>© 2025 廖天佑 Bless Liao. 基於真實專案資料製作</p>
             </div>
         </div>
     </footer>
@@ -1154,7 +1184,6 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
