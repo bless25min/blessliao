@@ -405,7 +405,7 @@ SOFTWARE.
 
 ### 🌐 線上訪問
 
-**[👉 立即訪問廖天佑個人網站](https://bless25min.github.io/blessliao-profile)**
+**[👉 立即訪問廖天佑個人網站](https://bless25min.github.io/blessliao/)**
 
 ### ⭐ 支持專案
 
