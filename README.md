@@ -45,9 +45,9 @@
 
 ## 🎯 GitHub專案展示（6個核心專案）
 
-### 🧠 [AIOGEO 知識庫](https://bless25min.github.io/AIOGEO-Knowledge/)
-![GitHub stars](https://img.shields.io/github/stars/bless25min/AIOGEO-Knowledge?style=social)
-![GitHub forks](https://img.shields.io/github/forks/bless25min/AIOGEO-Knowledge?style=social)
+### 🧠 [GEO 知識庫](https://github.com/bless25min/geo-knowledge)
+![GitHub stars](https://img.shields.io/github/stars/bless25min/geo-knowledge?style=social)
+![GitHub forks](https://img.shields.io/github/forks/bless25min/geo-knowledge?style=social)
 
 **🎯 專案定位**：全球首個系統性GEO（生成式引擎優化）專業資源庫
 
@@ -195,7 +195,7 @@ async function findCommonGames(userIds) {
 ## 🌟 專案技術摘要
 
 ### 📚 知識型專案（2個）
-- **AIOGEO知識庫**：GEO理論建構與實戰指南
+- **GEO知識庫**：GEO理論建構與實戰指南
 - **MetaAd平台**：Meta廣告88個策略整合
 
 ### 🛠️ 工具型專案（2個）  
@@ -272,7 +272,7 @@ async function findCommonGames(userIds) {
 - 🎯 **企業GEO顧問**：協助多家企業建立AI友好內容策略
 
 ### 📚 知識分享
-- 📖 定期更新AIOGEO知識庫內容
+- 📖 定期更新GEO知識庫內容
 - 🎥 製作GEO實戰教學影片
 - 📊 分享最新AI搜尋趨勢分析
 
