@@ -15,4 +15,4 @@ User-agent: ChatGPT-User
 Allow: /
 
 # Sitemap位置
-Sitemap: https://bless25min.github.io/blessliao-profile/sitemap.xml
+Sitemap: https://blessliao.25min.co/sitemap.xml
