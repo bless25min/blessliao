@@ -138,7 +138,7 @@ async function findCommonGames(userIds) {
 
 ---
 
-### 🚀 [個人品牌網站](https://bless25min.github.io/blessliao-profile)
+### 🚀 [個人品牌網站](https://blessliao.25min.co)
 ![GitHub stars](https://img.shields.io/github/stars/bless25min/blessliao?style=social)
 
 **🎯 專案定位**：完整實施GEO策略的個人品牌展示網站
