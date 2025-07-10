@@ -2,7 +2,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=28&duration=3000&pause=1000&color=2563EB&center=false&vCenter=true&width=600&lines=AI%E6%90%9C%E5%B0%8B%E5%84%AA%E5%8C%96%E5%B0%88%E5%AE%B6;%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E5%84%AA%E5%8C%96(GEO)%E9%A0%98%E5%B0%8E%E8%80%85;%E6%95%B8%E4%BD%8D%E8%A1%8C%E9%8A%B7%E7%AD%96%E7%95%A5%E9%A1%A7%E5%95%8F;AI+Content+Strategy+Expert)](https://git.io/typing-svg)
 
-> 🎯 **專業定位**：AI搜尋優化與行銷策略專家 | 生成式引擎優化（GEO）領域開拓者
+> 🎯 **專業定位**：AI搜尋優化與廣告行銷策略 | 生成式引擎優化（GEO）領域開拓者
 
 ## 📋 關於我
 
@@ -74,7 +74,7 @@
 ### 🎯 [MetaAd 廣告投手養成中心](https://bless25min.github.io/MetaAd/)
 ![GitHub stars](https://img.shields.io/github/stars/bless25min/MetaAd?style=social)
 
-**🎯 專案定位**：業界首創整合19個權威資料來源的Meta廣告專業平台
+**🎯 專案定位**：業界首創整合19個資料來源的Meta廣告專業平台
 
 **💡 核心亮點**：
 - 📊 **88個實戰策略**：經過驗證的廣告投放技巧
