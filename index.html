@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廖天佑 Bless Liao - AI搜尋優化與數位行銷專家</title>
-    <meta name="description" content="廖天佑 (Bless Liao) - GEO理論建構者、企業成長顧問、AI商業應用專家。協助企業實現200%-500%業績成長，專精生成式引擎優化與數位行銷策略。">
+    <title>廖天佑 Bless Liao - GEO理論建構者、AI搜尋優化與數位行銷專家</title>
+    <meta name="description" content="廖天佑 (Bless Liao) - GEO理論建構者、企業成長顧問、AI商業應用專家。創立25min求職升學救星、AIOGEO知識庫，協助企業實現200%-500%業績成長，專精生成式引擎優化與數位行銷策略。">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,7 +25,6 @@
             --text-light: #6b7280;
             --bg-white: #ffffff;
             --bg-light: #f8fafc;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --shadow-soft: 0 10px 25px rgba(0,0,0,0.1);
             --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
         }
@@ -219,6 +218,33 @@
             text-align: center;
             color: var(--text-light);
             margin-bottom: 3rem;
+        }
+
+        /* GitHub Avatar Styles */
+        .github-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            margin: 0 auto 2rem;
+            display: block;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .github-avatar:hover {
+            transform: scale(1.1);
+        }
+
+        .github-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .github-title {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-top: 1rem;
         }
 
         /* About Section */
@@ -426,6 +452,93 @@
             color: var(--secondary-color);
         }
 
+        /* Website Preview Tooltip */
+        .website-preview {
+            position: relative;
+            display: inline-block;
+        }
+
+        .website-preview::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: #ffffff;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .website-preview::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 2px solid #e5e7eb;
+            background-image: var(--preview-image);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .website-preview:hover::before {
+            opacity: 1;
+            visibility: visible;
+            bottom: calc(100% + 8px);
+        }
+
+        .website-preview:hover::after {
+            opacity: 1;
+            visibility: visible;
+            bottom: calc(100% + 16px);
+        }
+
+        /* 各個網站的預覽圖片 */
+        .preview-25min {
+            --preview-image: url('https://via.placeholder.com/300x200/667eea/ffffff?text=25min%0A求職升學救星');
+        }
+
+        .preview-aiogeo {
+            --preview-image: url('https://via.placeholder.com/300x200/764ba2/ffffff?text=AIOGEO%0AGEO知識庫');
+        }
+
+        .preview-metaad {
+            --preview-image: url('https://via.placeholder.com/300x200/3b82f6/ffffff?text=MetaAd%0A廣告平台');
+        }
+
+        .preview-brandshare {
+            --preview-image: url('https://via.placeholder.com/300x200/f59e0b/ffffff?text=BrandShare%0A品牌平台');
+        }
+
+        .preview-steam {
+            --preview-image: url('https://via.placeholder.com/300x200/10b981/ffffff?text=Steam%0A遊戲工具');
+        }
+
+        .preview-ai-studio {
+            --preview-image: url('https://via.placeholder.com/300x200/8b5cf6/ffffff?text=25min%0AAI工作室');
+        }
+
+        .preview-facebook {
+            --preview-image: url('https://via.placeholder.com/300x200/1877f2/ffffff?text=Facebook%0A個人檔案');
+        }
+
+        .preview-github {
+            --preview-image: url('https://via.placeholder.com/300x200/333333/ffffff?text=GitHub%0A開源專案');
+        }
+
         /* Achievement Section */
         .achievement-highlights {
             display: grid;
@@ -592,125 +705,6 @@
         .fade-in:nth-child(2) { animation-delay: 0.2s; }
         .fade-in:nth-child(3) { animation-delay: 0.3s; }
         .fade-in:nth-child(4) { animation-delay: 0.4s; }
-
-        /* GitHub Avatar Styles */
-        .github-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 3px solid var(--primary-color);
-            margin-right: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .github-avatar:hover {
-            transform: scale(1.1);
-        }
-
-        .profile-with-github {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Website Preview Tooltip */
-        .website-preview {
-            position: relative;
-            display: inline-block;
-        }
-
-        .website-preview::before {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 8px solid transparent;
-            border-top-color: #ffffff;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-
-        .website-preview::after {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 200px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            border: 2px solid #e5e7eb;
-            background-image: var(--preview-image);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .website-preview:hover::before {
-            opacity: 1;
-            visibility: visible;
-            bottom: calc(100% + 8px);
-        }
-
-        .website-preview:hover::after {
-            opacity: 1;
-            visibility: visible;
-            bottom: calc(100% + 16px);
-        }
-
-        /* 各個網站的預覽圖片 */
-        .preview-25min {
-            --preview-image: url('https://via.placeholder.com/300x200/667eea/ffffff?text=25min%0A求職升學救星');
-        }
-
-        .preview-aiogeo {
-            --preview-image: url('https://via.placeholder.com/300x200/764ba2/ffffff?text=AIOGEO%0AGEO知識庫');
-        }
-
-        .preview-metaad {
-            --preview-image: url('https://via.placeholder.com/300x200/3b82f6/ffffff?text=MetaAd%0A廣告平台');
-        }
-
-        .preview-brandshare {
-            --preview-image: url('https://via.placeholder.com/300x200/f59e0b/ffffff?text=BrandShare%0A品牌平台');
-        }
-
-        .preview-steam {
-            --preview-image: url('https://via.placeholder.com/300x200/10b981/ffffff?text=Steam%0A遊戲工具');
-        }
-
-        .preview-ai-studio {
-            --preview-image: url('https://via.placeholder.com/300x200/8b5cf6/ffffff?text=25min%0AAI工作室');
-        }
-
-        /* 社群媒體預覽 */
-        .preview-linkedin {
-            --preview-image: url('https://via.placeholder.com/300x200/0077b5/ffffff?text=LinkedIn%0A專業檔案');
-        }
-
-        .preview-instagram {
-            --preview-image: url('https://via.placeholder.com/300x200/e4405f/ffffff?text=Instagram%0A@reedread');
-        }
-
-        .preview-facebook {
-            --preview-image: url('https://via.placeholder.com/300x200/1877f2/ffffff?text=Facebook%0A25Min專頁');
-        }
-
-        .preview-github {
-            --preview-image: url('https://via.placeholder.com/300x200/333333/ffffff?text=GitHub%0A開源專案');
-        }
     </style>
 </head>
 <body>
@@ -737,9 +731,9 @@
                 </div>
             </div>
             <h1 class="hero-title">廖天佑 Bless Liao</h1>
-            <p class="hero-subtitle">AI搜尋優化與數位行銷專家</p>
+            <p class="hero-subtitle">GEO理論建構者、AI搜尋優化與數位行銷專家</p>
             <p class="hero-description">
-                GEO理論建構者 | 企業成長顧問 | 創新實踐者<br>
+                企業成長顧問 | 創新實踐者 | 25min創辦人<br>
                 協助企業在AI時代實現突破性成長
             </p>
         </div>
@@ -749,8 +743,10 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">關於廖天佑</h2>
-            <div class="profile-with-github">
-                <img src="https://avatars.githubusercontent.com/blessliao" alt="廖天佑 GitHub Avatar" class="github-avatar" crossorigin="anonymous" onerror="this.src='https://ui-avatars.com/api/?name=Bless+Liao&background=667eea&color=fff&size=60&font-size=0.6'">
+            
+            <div class="github-section">
+                <img src="https://avatars.githubusercontent.com/u/133640701?v=4" alt="廖天佑 GitHub Avatar" class="github-avatar" id="githubAvatar">
+                <p class="github-title">GitHub: @blessliao</p>
                 <p class="section-subtitle">
                     超過10年數位行銷實戰經驗，專精AI時代的內容策略與搜尋優化
                 </p>
@@ -946,7 +942,7 @@
                             整合19個權威資料來源的Meta廣告優化平台，提供88個實戰驗證策略。
                             協助企業主提升廣告ROAS，實現200%-500%業績成長。
                         </p>
-                        <a href="https://metaad.example.com" class="project-link website-preview preview-metaad" target="_blank">
+                        <a href="#" class="project-link website-preview preview-metaad">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -963,7 +959,7 @@
                             創新的品牌曝光與社群互動平台，結合AI演算法分析最佳曝光時機。
                             協助品牌主精準觸達目標受眾，提升品牌知名度與互動率。
                         </p>
-                        <a href="https://brandshare.example.com" class="project-link website-preview preview-brandshare" target="_blank">
+                        <a href="#" class="project-link website-preview preview-brandshare">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -980,7 +976,7 @@
                             智能Steam遊戲篩選工具，透過OAuth認證分析群組成員的遊戲庫。
                             快速找出所有人都擁有的遊戲，解決多人遊戲選擇困難的問題。
                         </p>
-                        <a href="https://steamgroup.example.com" class="project-link website-preview preview-steam" target="_blank">
+                        <a href="#" class="project-link website-preview preview-steam">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -997,7 +993,7 @@
                             提供多元AI商業應用服務，包含室內設計優化、電商模特應用、形象照製作、
                             網頁開發、商業MVP製作、EA程式交易系統等完整AI解決方案。
                         </p>
-                        <a href="https://25min.co/ai-studio" class="project-link website-preview preview-ai-studio" target="_blank">
+                        <a href="#" class="project-link website-preview preview-ai-studio">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -1146,31 +1142,11 @@
 
                 <div class="contact-card fade-in">
                     <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <h3 class="contact-title">LinkedIn</h3>
-                    <p class="contact-info">
-                        <a href="https://linkedin.com/in/blessliao" class="contact-link link-preview" data-preview="💼 專業社群檔案 - 商業合作洽談" target="_blank">廖天佑 Bless Liao</a>
-                    </p>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3 class="contact-title">Instagram</h3>
-                    <p class="contact-info">
-                        <a href="https://instagram.com/reedread" class="contact-link link-preview" data-preview="📸 生活與工作分享 - 創業心得" target="_blank">@reedread</a>
-                    </p>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
                         <i class="fab fa-facebook"></i>
                     </div>
                     <h3 class="contact-title">Facebook</h3>
                     <p class="contact-info">
-                        <a href="https://facebook.com/25min.co" class="contact-link link-preview" data-preview="📈 25Min貳拾伍數據顧問 - 行銷見解分享" target="_blank">25Min 專頁</a>
+                        <a href="#" class="contact-link website-preview preview-facebook" target="_blank">廖天佑個人檔案</a>
                     </p>
                 </div>
             </div>
@@ -1184,16 +1160,10 @@
             <p>在AI時代，內容的價值在於被AI正確理解與傳播</p>
             
             <div class="social-links">
-                <a href="https://github.com/blessliao" class="social-link link-preview" data-preview="💻 GitHub開源專案" target="_blank">
+                <a href="https://github.com/blessliao" class="social-link website-preview preview-github" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/blessliao" class="social-link link-preview" data-preview="💼 LinkedIn專業檔案" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/reedread" class="social-link link-preview" data-preview="📸 Instagram生活分享" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/25min.co" class="social-link link-preview" data-preview="📈 Facebook專頁" target="_blank">
+                <a href="#" class="social-link website-preview preview-facebook" target="_blank">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
@@ -1262,7 +1232,7 @@
             });
         });
 
-        // Dynamic typing effect for hero subtitle (optional enhancement)
+        // Dynamic typing effect for hero subtitle
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.innerHTML = '';
@@ -1276,18 +1246,40 @@
             type();
         }
 
-        // Initialize typing effect after page load
+        // Initialize and handle GitHub avatar
         window.addEventListener('load', function() {
-            // GitHub avatar fallback handling
-            const githubAvatar = document.querySelector('.github-avatar');
+            // GitHub avatar with comprehensive fallback
+            const githubAvatar = document.getElementById('githubAvatar');
             if (githubAvatar) {
-                githubAvatar.addEventListener('error', function() {
-                    this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" /></linearGradient></defs><rect width="60" height="60" fill="url(#grad)" rx="30"/><text x="30" y="38" text-anchor="middle" fill="white" font-size="16" font-family="Arial" font-weight="bold">BL</text></svg>';
+                const avatarUrls = [
+                    'https://avatars.githubusercontent.com/u/133640701?v=4',
+                    'https://avatars.githubusercontent.com/blessliao',
+                    'https://github.com/blessliao.png',
+                    'https://ui-avatars.com/api/?name=Bless+Liao&background=667eea&color=fff&size=80&font-size=0.6',
+                    'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" /></linearGradient></defs><rect width="80" height="80" fill="url(#grad)" rx="40"/><text x="40" y="48" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">BL</text></svg>'
+                ];
+                
+                let currentIndex = 0;
+                
+                function tryNextAvatar() {
+                    if (currentIndex < avatarUrls.length - 1) {
+                        currentIndex++;
+                        githubAvatar.src = avatarUrls[currentIndex];
+                    }
+                }
+                
+                githubAvatar.addEventListener('error', tryNextAvatar);
+                
+                githubAvatar.addEventListener('load', function() {
+                    console.log('✅ GitHub頭像載入成功:', this.src);
                 });
+                
+                // 設置初始圖片
+                githubAvatar.src = avatarUrls[0];
             }
 
-            // Enhanced link preview functionality
-            document.querySelectorAll('.link-preview').forEach(link => {
+            // Enhanced website preview functionality
+            document.querySelectorAll('.website-preview').forEach(link => {
                 link.addEventListener('mouseenter', function() {
                     this.style.position = 'relative';
                     this.style.zIndex = '1002';
@@ -1298,10 +1290,11 @@
                 });
             });
 
+            // Typing effect
             setTimeout(() => {
                 const subtitle = document.querySelector('.hero-subtitle');
                 if (subtitle) {
-                    typeWriter(subtitle, 'AI搜尋優化與數位行銷專家', 80);
+                    typeWriter(subtitle, 'GEO理論建構者、AI搜尋優化與數位行銷專家', 80);
                 }
             }, 1500);
         });
