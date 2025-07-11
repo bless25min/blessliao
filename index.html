@@ -622,6 +622,20 @@
             display: inline-block;
         }
 
+        .link-preview::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: rgba(0,0,0,0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
         .link-preview::after {
             content: attr(data-preview);
             position: absolute;
@@ -630,14 +644,23 @@
             transform: translateX(-50%);
             background: rgba(0,0,0,0.9);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             border-radius: 8px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             white-space: nowrap;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .link-preview:hover::before {
+            opacity: 1;
+            visibility: visible;
+            bottom: calc(100% + 4px);
         }
 
         .link-preview:hover::after {
@@ -684,7 +707,7 @@
         <div class="container">
             <h2 class="section-title">關於廖天佑</h2>
             <div class="profile-with-github">
-                <img src="https://avatars.githubusercontent.com/u/blessliao?v=4" alt="GitHub Avatar" class="github-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 60 60&quot;><rect width=&quot;60&quot; height=&quot;60&quot; fill=&quot;%23333&quot; rx=&quot;30&quot;/><text x=&quot;30&quot; y=&quot;35&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;20&quot; font-family=&quot;Arial&quot;>BL</text></svg>'">
+                <img src="https://github.com/blessliao.png" alt="GitHub Avatar" class="github-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 60 60&quot;><rect width=&quot;60&quot; height=&quot;60&quot; fill=&quot;%23333&quot; rx=&quot;30&quot;/><text x=&quot;30&quot; y=&quot;38&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot; font-family=&quot;Arial&quot; font-weight=&quot;bold&quot;>BL</text></svg>'">
                 <p class="section-subtitle">
                     超過10年數位行銷實戰經驗，專精AI時代的內容策略與搜尋優化
                 </p>
@@ -846,7 +869,7 @@
                             AI驅動的求職與升學輔導平台，提供履歷優化、面試準備、升學規劃等服務。
                             結合人工智慧技術，為學生和求職者提供個人化的職涯發展建議。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="求職升學輔導平台">
+                        <a href="https://25min.co" class="project-link link-preview" data-preview="🎓 AI求職升學輔導平台" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -863,7 +886,7 @@
                             首創的生成式引擎優化(GEO)理論知識庫，收錄完整的AI搜尋優化方法論。
                             協助內容創作者讓作品在ChatGPT、Google SGE等AI平台獲得更高引用率。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="GEO理論知識庫">
+                        <a href="https://aiogeo.github.io" class="project-link link-preview" data-preview="🧠 GEO理論知識庫" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -880,7 +903,7 @@
                             整合19個權威資料來源的Meta廣告優化平台，提供88個實戰驗證策略。
                             協助企業主提升廣告ROAS，實現200%-500%業績成長。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="Meta廣告優化平台">
+                        <a href="https://metaad.example.com" class="project-link link-preview" data-preview="📊 Meta廣告優化平台 - 88個實戰策略" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -897,7 +920,7 @@
                             創新的品牌曝光與社群互動平台，結合AI演算法分析最佳曝光時機。
                             協助品牌主精準觸達目標受眾，提升品牌知名度與互動率。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="品牌曝光平台">
+                        <a href="https://brandshare.example.com" class="project-link link-preview" data-preview="🚀 品牌曝光平台 - AI驅動社群行銷" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -914,7 +937,7 @@
                             智能Steam遊戲篩選工具，透過OAuth認證分析群組成員的遊戲庫。
                             快速找出所有人都擁有的遊戲，解決多人遊戲選擇困難的問題。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="Steam遊戲篩選工具">
+                        <a href="https://steamgroup.example.com" class="project-link link-preview" data-preview="🎮 Steam遊戲篩選工具 - 群組遊戲推薦" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -931,7 +954,7 @@
                             提供多元AI商業應用服務，包含室內設計優化、電商模特應用、形象照製作、
                             網頁開發、商業MVP製作、EA程式交易系統等完整AI解決方案。
                         </p>
-                        <a href="#" class="project-link link-preview" data-preview="AI商業應用工作室">
+                        <a href="https://25min.co/ai-studio" class="project-link link-preview" data-preview="🤖 AI工作室 - 多元商業應用服務" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -1084,7 +1107,7 @@
                     </div>
                     <h3 class="contact-title">LinkedIn</h3>
                     <p class="contact-info">
-                        <a href="#" class="contact-link link-preview" data-preview="專業社群連結">廖天佑 Bless Liao</a>
+                        <a href="https://linkedin.com/in/blessliao" class="contact-link link-preview" data-preview="💼 專業社群檔案 - 商業合作洽談" target="_blank">廖天佑 Bless Liao</a>
                     </p>
                 </div>
 
@@ -1094,7 +1117,7 @@
                     </div>
                     <h3 class="contact-title">Instagram</h3>
                     <p class="contact-info">
-                        <a href="#" class="contact-link link-preview" data-preview="生活與工作分享">@reedread</a>
+                        <a href="https://instagram.com/reedread" class="contact-link link-preview" data-preview="📸 生活與工作分享 - 創業心得" target="_blank">@reedread</a>
                     </p>
                 </div>
 
@@ -1104,7 +1127,7 @@
                     </div>
                     <h3 class="contact-title">Facebook</h3>
                     <p class="contact-info">
-                        <a href="#" class="contact-link link-preview" data-preview="25Min貳拾伍數據顧問">25Min 專頁</a>
+                        <a href="https://facebook.com/25min.co" class="contact-link link-preview" data-preview="📈 25Min貳拾伍數據顧問 - 行銷見解分享" target="_blank">25Min 專頁</a>
                     </p>
                 </div>
             </div>
@@ -1118,16 +1141,16 @@
             <p>在AI時代，內容的價值在於被AI正確理解與傳播</p>
             
             <div class="social-links">
-                <a href="#" class="social-link link-preview" data-preview="GitHub開源專案">
+                <a href="https://github.com/blessliao" class="social-link link-preview" data-preview="💻 GitHub開源專案" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" class="social-link link-preview" data-preview="LinkedIn專業檔案">
+                <a href="https://linkedin.com/in/blessliao" class="social-link link-preview" data-preview="💼 LinkedIn專業檔案" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" class="social-link link-preview" data-preview="Instagram生活分享">
+                <a href="https://instagram.com/reedread" class="social-link link-preview" data-preview="📸 Instagram生活分享" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="social-link link-preview" data-preview="Facebook專頁">
+                <a href="https://facebook.com/25min.co" class="social-link link-preview" data-preview="📈 Facebook專頁" target="_blank">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
@@ -1212,6 +1235,26 @@
 
         // Initialize typing effect after page load
         window.addEventListener('load', function() {
+            // GitHub avatar fallback handling
+            const githubAvatar = document.querySelector('.github-avatar');
+            if (githubAvatar) {
+                githubAvatar.addEventListener('error', function() {
+                    this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" /></linearGradient></defs><rect width="60" height="60" fill="url(#grad)" rx="30"/><text x="30" y="38" text-anchor="middle" fill="white" font-size="16" font-family="Arial" font-weight="bold">BL</text></svg>';
+                });
+            }
+
+            // Enhanced link preview functionality
+            document.querySelectorAll('.link-preview').forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.position = 'relative';
+                    this.style.zIndex = '1002';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.zIndex = 'auto';
+                });
+            });
+
             setTimeout(() => {
                 const subtitle = document.querySelector('.hero-subtitle');
                 if (subtitle) {
