@@ -616,57 +616,100 @@
             margin-bottom: 2rem;
         }
 
-        /* Link Preview Tooltip */
-        .link-preview {
+        /* Website Preview Tooltip */
+        .website-preview {
             position: relative;
             display: inline-block;
         }
 
-        .link-preview::before {
+        .website-preview::before {
             content: '';
             position: absolute;
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top-color: rgba(0,0,0,0.9);
+            border: 8px solid transparent;
+            border-top-color: #ffffff;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1001;
         }
 
-        .link-preview::after {
-            content: attr(data-preview);
+        .website-preview::after {
+            content: '';
             position: absolute;
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(0,0,0,0.9);
-            color: white;
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            white-space: nowrap;
+            width: 300px;
+            height: 200px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            max-width: 200px;
-            text-align: center;
+            border: 2px solid #e5e7eb;
+            background-image: var(--preview-image);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        .link-preview:hover::before {
+        .website-preview:hover::before {
             opacity: 1;
             visibility: visible;
-            bottom: calc(100% + 4px);
+            bottom: calc(100% + 8px);
         }
 
-        .link-preview:hover::after {
+        .website-preview:hover::after {
             opacity: 1;
             visibility: visible;
-            bottom: calc(100% + 10px);
+            bottom: calc(100% + 16px);
+        }
+
+        /* 各個網站的預覽圖片 */
+        .preview-25min {
+            --preview-image: url('https://via.placeholder.com/300x200/667eea/ffffff?text=25min%0A求職升學救星');
+        }
+
+        .preview-aiogeo {
+            --preview-image: url('https://via.placeholder.com/300x200/764ba2/ffffff?text=AIOGEO%0AGEO知識庫');
+        }
+
+        .preview-metaad {
+            --preview-image: url('https://via.placeholder.com/300x200/3b82f6/ffffff?text=MetaAd%0A廣告平台');
+        }
+
+        .preview-brandshare {
+            --preview-image: url('https://via.placeholder.com/300x200/f59e0b/ffffff?text=BrandShare%0A品牌平台');
+        }
+
+        .preview-steam {
+            --preview-image: url('https://via.placeholder.com/300x200/10b981/ffffff?text=Steam%0A遊戲工具');
+        }
+
+        .preview-ai-studio {
+            --preview-image: url('https://via.placeholder.com/300x200/8b5cf6/ffffff?text=25min%0AAI工作室');
+        }
+
+        /* 社群媒體預覽 */
+        .preview-linkedin {
+            --preview-image: url('https://via.placeholder.com/300x200/0077b5/ffffff?text=LinkedIn%0A專業檔案');
+        }
+
+        .preview-instagram {
+            --preview-image: url('https://via.placeholder.com/300x200/e4405f/ffffff?text=Instagram%0A@reedread');
+        }
+
+        .preview-facebook {
+            --preview-image: url('https://via.placeholder.com/300x200/1877f2/ffffff?text=Facebook%0A25Min專頁');
+        }
+
+        .preview-github {
+            --preview-image: url('https://via.placeholder.com/300x200/333333/ffffff?text=GitHub%0A開源專案');
         }
     </style>
 </head>
@@ -707,7 +750,7 @@
         <div class="container">
             <h2 class="section-title">關於廖天佑</h2>
             <div class="profile-with-github">
-                <img src="https://github.com/blessliao.png" alt="GitHub Avatar" class="github-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 60 60&quot;><rect width=&quot;60&quot; height=&quot;60&quot; fill=&quot;%23333&quot; rx=&quot;30&quot;/><text x=&quot;30&quot; y=&quot;38&quot; text-anchor=&quot;middle&quot; fill=&quot;white&quot; font-size=&quot;16&quot; font-family=&quot;Arial&quot; font-weight=&quot;bold&quot;>BL</text></svg>'">
+                <img src="https://avatars.githubusercontent.com/blessliao" alt="廖天佑 GitHub Avatar" class="github-avatar" crossorigin="anonymous" onerror="this.src='https://ui-avatars.com/api/?name=Bless+Liao&background=667eea&color=fff&size=60&font-size=0.6'">
                 <p class="section-subtitle">
                     超過10年數位行銷實戰經驗，專精AI時代的內容策略與搜尋優化
                 </p>
@@ -869,7 +912,7 @@
                             AI驅動的求職與升學輔導平台，提供履歷優化、面試準備、升學規劃等服務。
                             結合人工智慧技術，為學生和求職者提供個人化的職涯發展建議。
                         </p>
-                        <a href="https://25min.co" class="project-link link-preview" data-preview="🎓 AI求職升學輔導平台" target="_blank">
+                        <a href="https://25min.co" class="project-link website-preview preview-25min" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -886,7 +929,7 @@
                             首創的生成式引擎優化(GEO)理論知識庫，收錄完整的AI搜尋優化方法論。
                             協助內容創作者讓作品在ChatGPT、Google SGE等AI平台獲得更高引用率。
                         </p>
-                        <a href="https://aiogeo.github.io" class="project-link link-preview" data-preview="🧠 GEO理論知識庫" target="_blank">
+                        <a href="https://aiogeo.github.io" class="project-link website-preview preview-aiogeo" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -903,7 +946,7 @@
                             整合19個權威資料來源的Meta廣告優化平台，提供88個實戰驗證策略。
                             協助企業主提升廣告ROAS，實現200%-500%業績成長。
                         </p>
-                        <a href="https://metaad.example.com" class="project-link link-preview" data-preview="📊 Meta廣告優化平台 - 88個實戰策略" target="_blank">
+                        <a href="https://metaad.example.com" class="project-link website-preview preview-metaad" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -920,7 +963,7 @@
                             創新的品牌曝光與社群互動平台，結合AI演算法分析最佳曝光時機。
                             協助品牌主精準觸達目標受眾，提升品牌知名度與互動率。
                         </p>
-                        <a href="https://brandshare.example.com" class="project-link link-preview" data-preview="🚀 品牌曝光平台 - AI驅動社群行銷" target="_blank">
+                        <a href="https://brandshare.example.com" class="project-link website-preview preview-brandshare" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -937,7 +980,7 @@
                             智能Steam遊戲篩選工具，透過OAuth認證分析群組成員的遊戲庫。
                             快速找出所有人都擁有的遊戲，解決多人遊戲選擇困難的問題。
                         </p>
-                        <a href="https://steamgroup.example.com" class="project-link link-preview" data-preview="🎮 Steam遊戲篩選工具 - 群組遊戲推薦" target="_blank">
+                        <a href="https://steamgroup.example.com" class="project-link website-preview preview-steam" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
@@ -954,7 +997,7 @@
                             提供多元AI商業應用服務，包含室內設計優化、電商模特應用、形象照製作、
                             網頁開發、商業MVP製作、EA程式交易系統等完整AI解決方案。
                         </p>
-                        <a href="https://25min.co/ai-studio" class="project-link link-preview" data-preview="🤖 AI工作室 - 多元商業應用服務" target="_blank">
+                        <a href="https://25min.co/ai-studio" class="project-link website-preview preview-ai-studio" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             查看專案
                         </a>
