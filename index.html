@@ -3,1300 +3,671 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廖天佑 Bless Liao - GEO理論建構者、AI搜尋優化與數位行銷專家</title>
-    <meta name="description" content="廖天佑 (Bless Liao) - GEO理論建構者、企業成長顧問、AI商業應用專家。創立25min求職升學救星，協助企業實現200%-500%業績成長，專精生成式引擎優化與數位行銷策略。">
+    <title>廖天佑 Bless Liao - GEO生成式引擎優化專家 | 25min創辦人</title>
+    <meta name="description" content="廖天佑（Bless Liao）是GEO理論建構者、25min創辦人，專精於生成式引擎優化、AI商業應用、數位行銷策略。發表GEO學術論文，協助企業提升AI搜尋可見度。">
+    <meta name="author" content="廖天佑 Bless Liao">
+    <meta property="og:title" content="廖天佑 Bless Liao - GEO生成式引擎優化專家">
+    <meta property="og:description" content="GEO理論建構者，協助企業在AI搜尋時代提升內容可見度">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blessliao.25min.co/">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <!-- CSS Styles -->
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #7c3aed;
-            --accent-color: #f59e0b;
-            --success-color: #10b981;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-white: #ffffff;
-            --bg-light: #f8fafc;
-            --shadow-soft: 0 10px 25px rgba(0,0,0,0.1);
-            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
+        
         body {
-            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
+            color: #333;
+            background-color: #ffffff;
         }
-
-        /* Header with animated background */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            text-align: center;
-            color: white;
-            z-index: 1;
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .profile-container {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 6px solid rgba(255,255,255,0.3);
-            box-shadow: var(--shadow-soft);
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            line-height: 1.8;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-        }
-
+        
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
         }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(145deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            color: white;
+            padding: 80px 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
         }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
-            color: var(--text-light);
-            margin-bottom: 3rem;
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
         }
-
-        /* GitHub Avatar Styles */
-        .github-avatar {
-            width: 80px;
-            height: 80px;
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 0 0 300px;
+        }
+        
+        .profile-img {
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
-            border: 4px solid var(--primary-color);
-            margin: 0 auto 2rem;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             display: block;
-            transition: transform 0.3s ease;
-            box-shadow: var(--shadow-soft);
+            object-fit: cover;
         }
-
-        .github-avatar:hover {
-            transform: scale(1.1);
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
-
-        .github-section {
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        
+        .scroll-indicator {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-top: 40px;
+            opacity: 0.7;
         }
-
-        .github-title {
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            color: #8b5cf6;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-of-type(even) {
+            background-color: #f9fafb;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1f2937;
+            font-weight: 700;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background: #6366f1;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
             font-size: 1.1rem;
-            color: var(--text-light);
-            margin-top: 1rem;
+            line-height: 1.8;
         }
-
-        /* About Section */
+        
+        /* Grid Layouts */
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-
-        .about-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .about-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .about-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .about-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .about-description {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Services Section */
-        .services-grid {
+        
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-
-        .service-card {
+        
+        /* Cards */
+        .card {
             background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .service-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2rem;
-            color: white;
-            text-align: center;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-subtitle {
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-description {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .feature-tag {
-            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .project-preview {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--text-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-preview::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .project-card:hover .project-preview::before {
-            left: 100%;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .project-description {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Website Preview Tooltip */
-        .website-preview {
-            position: relative;
-            display: inline-block;
-        }
-
-        .website-preview::before {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 8px solid transparent;
-            border-top-color: #ffffff;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-
-        .website-preview::after {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 200px;
-            background: #ffffff;
+            padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            border: 2px solid #e5e7eb;
-            background-image: var(--preview-image);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        .website-preview:hover::before {
-            opacity: 1;
-            visibility: visible;
-            bottom: calc(100% + 8px);
-        }
-
-        .website-preview:hover::after {
-            opacity: 1;
-            visibility: visible;
-            bottom: calc(100% + 16px);
-        }
-
-        /* 各個網站的預覽圖片 */
-        .preview-25min {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23667eea"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">25min</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">求職升學救星</text></svg>');
-        }
-
-        .preview-aiogeo {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23764ba2"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">AIOGEO</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">GEO知識庫</text></svg>');
-        }
-
-        .preview-metaad {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%233b82f6"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">MetaAd</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">廣告平台</text></svg>');
-        }
-
-        .preview-brandshare {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23f59e0b"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">BrandShare</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">品牌平台</text></svg>');
-        }
-
-        .preview-steam {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%2310b981"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">Steam</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">遊戲工具</text></svg>');
-        }
-
-        .preview-ai-studio {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%238b5cf6"/><text x="150" y="80" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">25min</text><text x="150" y="110" text-anchor="middle" fill="white" font-size="16" font-family="Arial">AI工作室</text></svg>');
-        }
-
-        .preview- {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%231877f2"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold"></text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">個人檔案</text></svg>');
-        }
-
-        .preview-github {
-            --preview-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23333333"/><text x="150" y="90" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">GitHub</text><text x="150" y="120" text-anchor="middle" fill="white" font-size="16" font-family="Arial">開源專案</text></svg>');
-        }
-
-        /* Achievement Section */
-        .achievement-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .achievement-item {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-item:hover {
+        
+        .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
-
-        .achievement-number {
+        
+        .card h3 {
+            color: #6366f1;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .card ul {
+            list-style: none;
+        }
+        
+        .card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        /* Research Paper */
+        .research-paper {
+            background: white;
+            border: 2px solid #6366f1;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .research-paper h3 {
+            color: #6366f1;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .paper-meta {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .paper-meta p {
+            margin: 5px 0;
+        }
+        
+        .paper-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .paper-links a {
+            background: #6366f1;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .paper-links a:hover {
+            background: #4f46e5;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stat-number {
             font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
+            font-weight: 800;
+            color: #6366f1;
+            display: block;
         }
-
-        .achievement-label {
-            color: var(--text-light);
+        
+        .stat-label {
+            color: #6b7280;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        /* Project Items */
+        .project-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        
+        .project-item:hover {
+            border-color: #6366f1;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-item h4 {
+            color: #6366f1;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .project-item p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .project-item a {
+            color: #6366f1;
+            text-decoration: none;
             font-weight: 500;
         }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        
+        .project-item a:hover {
+            text-decoration: underline;
         }
-
-        .contact-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow-soft);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .contact-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
+        
+        /* Contact Info */
         .contact-info {
-            color: var(--text-light);
+            text-align: center;
+            margin: 30px 0;
         }
-
-        .contact-link {
-            color: var(--primary-color);
+        
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info a {
+            color: #6366f1;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
-
-        .contact-link:hover {
-            color: var(--secondary-color);
+        
+        .contact-info a:hover {
+            text-decoration: underline;
         }
-
+        
         /* Footer */
-        .footer {
-            background: var(--text-dark);
+        footer {
+            background: #1f2937;
             color: white;
             text-align: center;
-            padding: 3rem 0;
+            padding: 40px 0;
         }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        
+        footer p {
+            margin: 5px 0;
+            opacity: 0.9;
         }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .social-link:hover {
-            transform: scale(1.1);
-        }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-image {
+                order: -1;
+                flex: 0 0 auto;
+            }
+            
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            h1 {
                 font-size: 2.5rem;
             }
             
-            .hero-subtitle {
+            .subtitle {
                 font-size: 1.2rem;
             }
             
-            .nav-links {
-                display: none;
+            nav ul {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 15px 0;
             }
             
-            .services-grid,
-            .projects-grid {
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .paper-links {
+                flex-direction: column;
+            }
+            
+            .stats {
                 grid-template-columns: 1fr;
             }
             
-            .container {
-                padding: 0 1rem;
+            section {
+                padding: 50px 0;
             }
         }
-
-        /* Animation Classes */
+        
+        /* Simple fade-in animation */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
         }
-
-        .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
-        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-content">
-            <div class="nav-logo">廖天佑 Bless Liao</div>
-            <div class="nav-links">
-                <a href="#about">關於我</a>
-                <a href="#services">專業領域</a>
-                <a href="#projects">專案作品</a>
-                <a href="#achievement">實績成果</a>
-                <a href="#contact">聯絡方式</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="https://avatars.githubusercontent.com/u/133640701?v=4" alt="廖天佑 Bless Liao" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 200 200&quot;><defs><linearGradient id=&quot;grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;><stop offset=&quot;0%&quot; style=&quot;stop-color:%23667eea;stop-opacity:1&quot; /><stop offset=&quot;100%&quot; style=&quot;stop-color:%23764ba2;stop-opacity:1&quot; /></linearGradient></defs><rect width=&quot;200&quot; height=&quot;200&quot; fill=&quot;url(%23grad)&quot;/><circle cx=&quot;100&quot; cy=&quot;80&quot; r=&quot;35&quot; fill=&quot;white&quot; opacity=&quot;0.8&quot;/><path d=&quot;M60 140 Q100 120 140 140 L140 180 Q100 160 60 180 Z&quot; fill=&quot;white&quot; opacity=&quot;0.8&quot;/></svg>'">
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>廖天佑 Bless Liao</h1>
+                    <p class="subtitle">GEO生成式引擎優化專家 | 25min創辦人 | AI商業應用顧問</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://avatars.githubusercontent.com/u/133640701?v=4" alt="廖天佑 Bless Liao" class="profile-img">
                 </div>
             </div>
-            <h1 class="hero-title">廖天佑 Bless Liao</h1>
-            <p class="hero-subtitle">GEO理論建構者、AI搜尋優化與數位行銷專家</p>
-            <p class="hero-description">
-                企業成長顧問 | 創新實踐者 | 25min創辦人<br>
-                協助企業在AI時代實現突破性成長
-            </p>
+        </div>
+        <div class="scroll-indicator">
+            ↓
+        </div>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="#achievements">商業實績</a></li>
+            <li><a href="#research">研究成果</a></li>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#projects">專案作品</a></li>
+            <li><a href="#contact">聯絡資訊</a></li>
+        </ul>
+    </nav>
+    
+    <section id="achievements">
+        <div class="container">
+            <h2>商業實績</h2>
+            
+            <div class="about-grid">
+                <div class="card">
+                    <h3>📈 廣告代操成果</h3>
+                    <ul>
+                        <li>各產業客戶平均業績成長 <strong>200%～500%</strong></li>
+                        <li>獲客成本優化：最高從 $4,000 降至 $300（<strong>降幅92.5%</strong>）</li>
+                        <li>熟悉受Facebook及法規限制的廣告類型投放</li>
+                        <li>破解 Meta 演算法，創造極高效能廣告結果</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>🚀 行銷策略案例</h3>
+                    <ul>
+                        <li><strong>海外品牌行銷</strong>：從零開始打造年營收破億健身品牌</li>
+                        <li><strong>新創快速成長</strong>：從零開始打造年營收破五千萬課程學院品牌</li>
+                        <li><strong>營收轉虧為盈</strong>：協助連鎖品牌重回成長軌道</li>
+                        <li><strong>財商教育市場</strong>：打造萬人線上課程社群</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>📰 媒體報導</h3>
+                    <ul>
+                        <li><strong>Yahoo奇摩財經</strong>：報導大學學費補助新趨勢看法</li>
+                        <li><strong>民生電子報</strong>：報導清寒家庭及自立少年贊助方案</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
+    
+    <section id="research">
         <div class="container">
-            <h2 class="section-title">關於廖天佑</h2>
+            <h2>研究成果</h2>
             
-            <div class="github-section">
-                <img src="https://avatars.githubusercontent.com/u/133640701?v=4" alt="廖天佑 GitHub Avatar" class="github-avatar" id="githubAvatar">
-                <p class="github-title">GitHub: @blessliao</p>
-                <p class="section-subtitle">
-                    超過10年數位行銷實戰經驗，專精AI時代的內容策略與搜尋優化
-                </p>
+            <div class="research-paper">
+                <h3>📄 GEO Fundamentals: Optimization Strategies for Web Content in the Age of AI Search</h3>
+                <div class="paper-meta">
+                    <p><strong>作者：</strong>Tianyou Liao (a.k.a. Bless Liao), Tsai, Hao-Jui</p>
+                    <p><strong>發表時間：</strong>2025年7月</p>
+                    <p><strong>類型：</strong>學術論文</p>
+                </div>
+                <p><strong>摘要：</strong>本論文提出了生成式引擎優化（GEO）的綜合框架，旨在提升網頁內容在AI搜尋引擎（如ChatGPT、Perplexity、Google SGE）中的可見度與引用率。研究建立了三層語義可見性模型，並透過實證研究證實GEO策略可提升引用率達40%以上。</p>
+                <p>透過三週實作成功讓 GPT 等生成式 AI 主動引用品牌內容，驗證了 GEO 理論的實務效果。</p>
+                <div class="paper-links">
+                    <a href="https://github.com/bless25min/geo-arxiv" target="_blank">查看論文</a>
+                    <a href="https://geo.25min.co" target="_blank">GEO知識庫</a>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">65%+</div>
+                    <div class="stat-label">AI引用率提升</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">測試查詢數據</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3層</div>
+                    <div class="stat-label">語義優化模型</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>關於我</h2>
+            
+            <div class="highlight">
+                <p><strong>廖天佑（Bless Liao）</strong>是GEO（Generative Engine Optimization，生成式引擎優化）理論的建構者與實踐者，現任眾曜智庫總經理、25min創辦人。專注於協助企業在AI搜尋時代提升內容可見度，實現數位轉型。</p>
+                <p>在眾曜智庫團隊中，負責品牌聲量經營與整體行銷操作，並將每一次消費者的搜尋查詢都當作建立信任的臨門一腳來對待，強調內容可被查證與長期信任累積的重要性。</p>
             </div>
             
             <div class="about-grid">
-                <div class="about-card fade-in">
-                    <div class="about-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="about-title">GEO理論建構者</h3>
-                    <p class="about-description">
-                        GEO知識庫的創建者，建立完整的AI搜尋優化方法論，
-                        協助內容在ChatGPT、Google SGE等AI平台獲得引用。
-                    </p>
+                <div class="card fade-in">
+                    <h3>🎯 核心專業</h3>
+                    <ul>
+                        <li>GEO生成式引擎優化理論與實務</li>
+                        <li>AI商業應用開發與導入</li>
+                        <li>數據驅動的數位行銷策略</li>
+                        <li>網路聲量監測與控制系統</li>
+                        <li>MarTech 行銷科技整合應用</li>
+                    </ul>
                 </div>
-
-                <div class="about-card fade-in">
-                    <div class="about-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="about-title">企業成長顧問</h3>
-                    <p class="about-description">
-                        協助企業客戶在相同預算下實現200%-500%業績成長，建立完整的數位行銷解決方案，
-                        累積豐富的B2B顧問經驗。
-                    </p>
+                
+                <div class="card fade-in">
+                    <h3>🏆 主要成就</h3>
+                    <ul>
+                        <li>台灣首位發表GEO學術論文研究者</li>
+                        <li>疫情期間，協助多間企業實現200%-500%業績成長</li>
+                        <li>2023年率先成立AI工作室，提升專案效率50%+</li>
+                    </ul>
                 </div>
-
-                <div class="about-card fade-in">
-                    <div class="about-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="about-title">創新實踐者</h3>
-                    <p class="about-description">
-                        2022年率先採用ChatGPT等AI工具，將專案執行效率提升50%+。
-                        現任眾曜智庫總經理，致力於AI工具在商業場景的創新應用。
-                    </p>
+                
+                <div class="card fade-in">
+                    <h3>💡 創新理念</h3>
+                    <p>「破解平台邏輯，重建人性觸發點」</p>
+                    <p>致力於以數據驅動決策，結合AI技術創新，為企業打造低成本高轉換的行銷解決方案。</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section" style="background: var(--bg-light);">
+    
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title">專業領域</h2>
-            <p class="section-subtitle">
-                全方位數位行銷與技術服務，從策略到執行的完整解決方案
-            </p>
+            <h2>專案作品</h2>
             
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="service-title">GEO/聲量操作/數據分析</h3>
-                        <p class="service-subtitle">AI搜尋與網路聲量控制</p>
-                    </div>
-                    <div class="service-content">
-                        <p class="service-description">
-                            完整的GEO理論體系，讓內容在ChatGPT、Google SGE等AI平台獲得引用。
-                            同時提供網路聲量監測與控制服務，透過數據分析優化正負聲量比例。
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">生成式引擎優化</span>
-                            <span class="feature-tag">聲量監測系統</span>
-                            <span class="feature-tag">數據視覺化</span>
-                            <span class="feature-tag">輿情分析</span>
-                        </div>
-                    </div>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h4>GEO知識庫</h4>
+                    <p>台灣首個GEO專業資源庫，提供生成式引擎優化的完整理論與實務指南。</p>
+                    <a href="https://geo.25min.co" target="_blank">查看專案 →</a>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header" style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);">
-                        <div class="service-icon">
-                            <i class="fas fa-ad"></i>
-                        </div>
-                        <h3 class="service-title">Meta廣告操作與內容創意</h3>
-                        <p class="service-subtitle">88個實戰驗證策略</p>
-                    </div>
-                    <div class="service-content">
-                        <p class="service-description">
-                            整合19個權威資料來源，擁有88個實戰驗證的廣告投放策略。
-                            結合創意內容設計與數據分析，協助客戶ROAS提升，實現200%-500%業績成長。
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">演算法優化</span>
-                            <span class="feature-tag">素材創意</span>
-                            <span class="feature-tag">預算配置</span>
-                            <span class="feature-tag">轉換追蹤</span>
-                        </div>
-                    </div>
+                
+                <div class="project-item">
+                    <h4>MetaAd廣告投手養成中心</h4>
+                    <p>19個權威資源，88個實戰策略，專為Meta廣告投放優化設計。</p>
+                    <a href="https://metaad.25min.co" target="_blank">查看專案 →</a>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header" style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="service-title">AI商業應用開發</h3>
-                        <p class="service-subtitle">生成式AI技術落地</p>
-                    </div>
-                    <div class="service-content">
-                        <p class="service-description">
-                            2023年4月成立25min AI工作室，提供多元AI商業應用。包含室內設計優化、電商模特應用、
-                            形象照製作、網頁開發、商業MVP製作、EA程式交易系統設計等完整服務。
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">圖像生成</span>
-                            <span class="feature-tag">網頁製作</span>
-                            <span class="feature-tag">MVP開發</span>
-                            <span class="feature-tag">EA交易系統</span>
-                        </div>
-                    </div>
+                
+                <div class="project-item">
+                    <h4>好說</h4>
+                    <p>專業履歷代寫服務，透過60分鐘深度訪談，將職涯經歷轉化成一頁說服力強的職涯簡報。</p>
+                    <a href="https://cv.25min.co" target="_blank">查看專案 →</a>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                        <div class="service-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3 class="service-title">課程行銷/設計/講座主持</h3>
-                        <p class="service-subtitle">教育培訓與活動執行</p>
-                    </div>
-                    <div class="service-content">
-                        <p class="service-description">
-                            深耕財商教育領域五年，擅長課程行銷策略規劃與執行。
-                            提供教育類產品設計、線上線下講座主持、活動策劃等專業服務。
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">課程行銷</span>
-                            <span class="feature-tag">內容設計</span>
-                            <span class="feature-tag">活動主持</span>
-                            <span class="feature-tag">教育培訓</span>
-                        </div>
-                    </div>
+                
+                <div class="project-item">
+                    <h4>BrandShare廣告版位共享</h4>
+                    <p>創新品牌流量交換平台，實現廣告資源互惠共享。</p>
+                    <a href="https://brandshare.25min.co/" target="_blank">查看專案 →</a>
+                </div>
+                
+                <div class="project-item">
+                    <h4>EA程式交易系統</h4>
+                    <p>量化投資與自動化交易系統，結合技術分析與風險管理。</p>
+                    <a href="https://ea.25min.co" target="_blank">查看專案 →</a>
+                </div>
+                
+                <div class="project-item">
+                    <h4>Steam遊戲發現工具</h4>
+                    <p>Discord社群遊戲媒合工具，幫助玩家找到共同遊戲。</p>
+                    <a href="https://steamlibrary.25min.co" target="_blank">查看專案 →</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
+    
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title">專案作品</h2>
-            <p class="section-subtitle">
-                創新技術與商業應用的完美結合
-            </p>
+            <h2>聯絡資訊</h2>
             
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">25min個人品牌網頁製作(求職升學救星)</h3>
-                        <p class="project-description">
-                            AI驅動的求職與升學輔導平台，提供履歷優化、面試準備、升學規劃等服務。
-                            結合人工智慧技術，為學生和求職者提供個人化的職涯發展建議。
-                        </p>
-                        <a href="https://cv.25min.co" class="project-link website-preview preview-25min" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">GEO 知識庫</h3>
-                        <p class="project-description">
-                            首創的生成式引擎優化(GEO)理論知識庫，收錄完整的AI搜尋優化方法論。
-                            協助內容創作者讓作品在ChatGPT、Google SGE等AI平台獲得更高引用率。
-                        </p>
-                        <a href="https://geo.25min.co" class="project-link website-preview preview-geo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MetaAd 廣告投放知識庫</h3>
-                        <p class="project-description">
-                            整合19個權威資料來源的Meta廣告優化平台，提供88個實戰驗證策略。
-                            協助企業主提升廣告ROAS，實現200%-500%業績成長。
-                        </p>
-                        <a href="https://metaad.25min.co/" class="project-link website-preview preview-metaad">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">BrandShare 品牌曝光平台</h3>
-                        <p class="project-description">
-                            創新的品牌曝光與社群互動平台，結合AI演算法分析最佳曝光時機。
-                            協助品牌主精準觸達目標受眾，提升品牌知名度與互動率。
-                        </p>
-                        <a href="https://brandshare.25min.co/" class="project-link website-preview preview-brandshare">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Steam遊戲群組工具</h3>
-                        <p class="project-description">
-                            智能Steam遊戲篩選工具，透過OAuth認證分析群組成員的遊戲庫。
-                            快速找出所有人都擁有的遊戲，解決多人遊戲選擇困難的問題。
-                        </p>
-                        <a href="https://steamlibrary.25min.co/" class="project-link website-preview preview-steam">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-preview">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">25min AI工作室</h3>
-                        <p class="project-description">
-                            提供多元AI商業應用服務，包含室內設計優化、電商模特應用、形象照製作、
-                            網頁開發、商業MVP製作、EA程式交易系統等完整AI解決方案。
-                        </p>
-                        <a href="https://www.25min.co/" class="project-link website-preview preview-ai-studio">
-                            <i class="fas fa-external-link-alt"></i>
-                            查看專案
-                        </a>
-                    </div>
-                </div>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:bless@25min.co">bless@25min.co</a></p>
+                <p><strong>電話:</strong> (02) 2272-4261</p>
+                <p><strong>地址:</strong> 220新北市板橋區重慶路60-1號5樓</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/bless25min" target="_blank">@bless25min</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/reedread" target="_blank">@reedread</a></p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/d2x123" target="_blank">個人頁面</a></p>
             </div>
         </div>
     </section>
-
-    <!-- Achievement Section -->
-    <section id="achievement" class="section" style="background: var(--bg-light);">
+    
+    <footer>
         <div class="container">
-            <h2 class="section-title">商業實績與成果</h2>
-            <p class="section-subtitle">
-                用數據說話，以成果證明專業價值
-            </p>
-            
-            <div class="achievement-highlights">
-                <div class="achievement-item fade-in">
-                    <div class="achievement-number">200-500%</div>
-                    <div class="achievement-label">業績成長幅度</div>
-                </div>
-                <div class="achievement-item fade-in">
-                    <div class="achievement-number">破億</div>
-                    <div class="achievement-label">海外品牌年營收</div>
-                </div>
-                <div class="achievement-item fade-in">
-                    <div class="achievement-number">5000萬+</div>
-                    <div class="achievement-label">新創公司年營收</div>
-                </div>
-                <div class="achievement-item fade-in">
-                    <div class="achievement-number">萬人+</div>
-                    <div class="achievement-label">線上課程社群</div>
-                </div>
-            </div>
-
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <!-- 廣告代操成就 -->
-                <div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 3rem; border-radius: 20px; margin-bottom: 3rem;">
-                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center;">
-                        <i class="fas fa-ad" style="margin-right: 0.5rem;"></i>廣告代操實績
-                    </h3>
-                    <div class="about-grid">
-                        <div class="about-card fade-in">
-                            <div class="about-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="about-title">業績倍增</h3>
-                            <p class="about-description">
-                                在相同預算下，各產業客戶平均業績成長 <strong>200%～500%</strong>
-                            </p>
-                        </div>
-
-                        <div class="about-card fade-in">
-                            <div class="about-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3 class="about-title">高難度廣告</h3>
-                            <p class="about-description">
-                                熟悉受到及台灣法規嚴格限制的廣告類型投放
-                            </p>
-                        </div>
-
-                        <div class="about-card fade-in">
-                            <div class="about-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3 class="about-title">跨產業服務</h3>
-                            <p class="about-description">
-                                服務涵蓋教育、電商、金融、健康等多個產業領域
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 行銷策略成就 -->
-                <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h3 style="font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 2rem; text-align: center;">
-                        <i class="fas fa-chess-king" style="margin-right: 0.5rem;"></i>行銷策略成果
-                    </h3>
-                    <div class="about-grid">
-                        <div class="about-card fade-in">
-                            <div class="about-icon" style="color: #f59e0b;">
-                                <i class="fas fa-globe-asia"></i>
-                            </div>
-                            <h3 class="about-title">海外品牌開拓</h3>
-                            <p class="about-description">
-                                將一個海外新品牌從零發展至年營收<strong>破億台幣</strong><br>
-                                <span style="color: #6b7280;">（2年內達成）</span>
-                            </p>
-                        </div>
-
-                        <div class="about-card fade-in">
-                            <div class="about-icon" style="color: #10b981;">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <h3 class="about-title">新創快速成長</h3>
-                            <p class="about-description">
-                                一年內將新創課程公司年營收做到超過 <strong>5,000萬台幣</strong>
-                            </p>
-                        </div>
-
-                        <div class="about-card fade-in">
-                            <div class="about-icon" style="color: #ef4444;">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <h3 class="about-title">營收轉虧為盈</h3>
-                            <p class="about-description">
-                                協助超過一年營收負成長的連鎖品牌<strong>重回成長軌道</strong>
-                            </p>
-                        </div>
-
-                        <div class="about-card fade-in">
-                            <div class="about-icon" style="color: #8b5cf6;">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3 class="about-title">財商教育市場</h3>
-                            <p class="about-description">
-                                深耕5年，打造<strong>萬人線上課程社群</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">聯絡方式</h2>
-            <p class="section-subtitle">
-                歡迎洽談合作機會或專案諮詢
-            </p>
-            
-            <div class="contact-grid">
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="contact-title">電子信箱</h3>
-                    <p class="contact-info">
-                        <a href="mailto:bless@25min.co" class="contact-link">bless@25min.co</a>
-                    </p>
-                </div>
-
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fab fa-"></i>
-                    </div>
-                    <h3 class="contact-title"></h3>
-                    <p class="contact-info">
-                        <a href="https://www.facebook.com/d2x123/" class="contact-link website-preview preview-facebook" target="_blank">廖天佑個人檔案</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>廖天佑 Bless Liao</h3>
-            <p>在AI時代，內容的價值在於被AI正確理解與傳播</p>
-            
-            <div class="social-links">
-                <a href="https://github.com/blessliao" class="social-link website-preview preview-github" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.facebook.com/d2x123/" class="social-link website-preview preview-facebook" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-            
             <p>&copy; 2025 廖天佑 Bless Liao. All rights reserved.</p>
+            <p>最後更新日期: 2025年7月</p>
         </div>
     </footer>
-
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "廖天佑",
+        "alternateName": "Bless Liao",
+        "jobTitle": "GEO專家 / 25min創辦人 / 眾曜智庫總經理",
+        "worksFor": [
+            {
+                "@type": "Organization", 
+                "name": "眾曜智庫"
+            },
+            {
+                "@type": "Organization",
+                "name": "25min數據顧問"
+            }
+        ],
+        "email": "bless@25min.co",
+        "url": "https://blessliao.25min.co/",
+        "image": "https://avatars.githubusercontent.com/u/133640701?v=4",
+        "sameAs": [
+            "https://github.com/bless25min",
+            "https://www.instagram.com/reedread",
+            "https://www.facebook.com/d2x123"
+        ],
+        "knowsAbout": ["GEO", "生成式引擎優化", "AI商業應用", "數位行銷", "MarTech"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "研究機構"
+        }
+    }
+    </script>
+    
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-
-        // Navigation background change on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(255,255,255,0.98)';
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.background = 'rgba(255,255,255,0.95)';
-                nav.style.boxShadow = 'none';
-            }
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add loading animation to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const preview = this.querySelector('.project-preview');
-                preview.style.transform = 'scale(1.05)';
+        
+        // Simple fade in on scroll
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.card, .project-item, .stat-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
             });
             
-            card.addEventListener('mouseleave', function() {
-                const preview = this.querySelector('.project-preview');
-                preview.style.transform = 'scale(1)';
+            elements.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
             });
-        });
-
-        // Dynamic typing effect for hero subtitle
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize and handle GitHub avatar
-        window.addEventListener('load', function() {
-            // GitHub avatar with comprehensive fallback
-            const githubAvatar = document.getElementById('githubAvatar');
-            if (githubAvatar) {
-                const avatarUrls = [
-                    'https://avatars.githubusercontent.com/u/133640701?v=4',
-                    'https://avatars.githubusercontent.com/blessliao',
-                    'https://github.com/blessliao.png',
-                    'https://ui-avatars.com/api/?name=Bless+Liao&background=667eea&color=fff&size=80&font-size=0.6',
-                    'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" /></linearGradient></defs><rect width="80" height="80" fill="url(#grad)" rx="40"/><text x="40" y="48" text-anchor="middle" fill="white" font-size="24" font-family="Arial" font-weight="bold">BL</text></svg>'
-                ];
-                
-                let currentIndex = 0;
-                
-                function tryNextAvatar() {
-                    if (currentIndex < avatarUrls.length - 1) {
-                        currentIndex++;
-                        githubAvatar.src = avatarUrls[currentIndex];
-                    }
-                }
-                
-                githubAvatar.addEventListener('error', tryNextAvatar);
-                
-                githubAvatar.addEventListener('load', function() {
-                    console.log('✅ GitHub頭像載入成功:', this.src);
-                });
-                
-                // 設置初始圖片
-                githubAvatar.src = avatarUrls[0];
-            }
-
-            // Enhanced website preview functionality
-            document.querySelectorAll('.website-preview').forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    this.style.position = 'relative';
-                    this.style.zIndex = '1002';
-                });
-                
-                link.addEventListener('mouseleave', function() {
-                    this.style.zIndex = 'auto';
-                });
-            });
-
-            // Typing effect
-            setTimeout(() => {
-                const subtitle = document.querySelector('.hero-subtitle');
-                if (subtitle) {
-                    typeWriter(subtitle, 'GEO理論建構者、AI搜尋優化與數位行銷專家', 80);
-                }
-            }, 1500);
         });
     </script>
 </body>
